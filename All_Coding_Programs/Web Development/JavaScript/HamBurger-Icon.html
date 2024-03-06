@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            transition:display,background;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+        }
+        div{
+            height:80px;
+            width: 100vw;
+            background-color: cyan;
+            border-radius: 8px;
+            display: flex;
+            align-items:baseline;
+            justify-content:flex-end;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content:flex-end;
+            gap: 4em;
+            position: relative;
+            width:90%;
+            margin: auto;
+            flex-wrap: wrap;  
+        }
+        li{
+            list-style-type: none;
+            height: 40px;
+            width:120px;
+            border-radius:7px;
+            background:linear-gradient(orangered,white);
+            text-align: center;
+            right: 2em;
+            color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: elephant;
+        }
+        li:hover{
+            background-color:white;
+            border:1px solid blue;
+            /* border-top:none; */
+            cursor: pointer;
+            overflow: hidden;
+            transform: scale(1.2);
+        }
+        img{
+            position: fixed;
+            display: none;
+            border-radius: 3px;
+            /* filter:invert(1); */
+            /* background: transparent; */
+        }
+        @media only screen and (max-width:747px)
+        {
+            div{
+                height: 200px;
+            }
+        }
+        @media only screen and (max-width:338px)
+        {
+            div{
+                background:linear-gradient(45deg,pink,orangered);
+                height:250px;
+            }
+            ul{
+                flex-direction: column;
+                gap: 1.2em;
+                z-index: 1;
+                width:90px;
+                position: absolute;
+                right:5px;
+                /* top:1.5px; */
+                /* background: whitesmoke; */
+                border-radius:4px;
+                display: none;
+                top: 1.5em;
+                right:1em;
+            }
+            li{
+                background:none;
+                /* background:linear-gradient(45deg,white,blue); */
+                width:70px;
+                font-family:Georgia;
+                height: 30px;
+                color: black;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.727) inset;
+            }
+            img{
+                display:inline;
+                cursor: pointer;
+            }
+            /* img :hover ~ ul {
+                display:flex;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+        <img src="HamBurger_Icon.png" alt="icon" height="20px" width="20px">
+    </div>    
+</body>
+<script>
+    let count=0;
+    let list=()=>{
+        if(count%2==0)
+        {
+            document.querySelector("ul").style.display="flex";
+        }
+        else {
+            document.querySelector("ul").style.display="none";
+        }
+        count++;
+        // document.querySelector("div").style.background="whitesmoke";
+    }
+    let ham=document.querySelector("img");
+    ham.addEventListener("click",list);
+
+</script>
+</html>

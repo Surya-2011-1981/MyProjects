@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bounce Ball CSS animation</title>
+<style>
+  
+    .ball{
+        height:5em;
+        width: 5em;
+        background-color: blue;
+        border:3px solid yellow;
+        border-radius: 50%;
+        position:relative;
+        top:-31.7em;
+        animation-name: bounce;
+        animation-duration: 2000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function:ease-in-out;
+        animation-fill-mode:both;
+        box-shadow:  1px -3px 20px 1px #01579B;;
+    }
+    .box{
+        height: 80vh;
+        width: 60vw;
+        border: 1em solid black;
+        margin: auto;
+        box-shadow: inset 0px 0px 50px 15px red;
+        border-radius: 10px;
+        display: flex;
+        align-items:flex-end;
+        justify-content: center;
+        column-gap: 2em;
+    }
+    @keyframes bounce{
+       
+        0%{top:-31.7em;}
+        10%{top:-25em ;}
+        20%{top:-20em ;}
+        30%{top:-15em ;}
+        40%{top:-10em ;}
+        /* Center */
+        50%{top: 0em;}
+        /* center */
+        60%{top:-10em ;}
+        70%{top:-15em ;}
+        80%{top:-20em ;}
+        90%{top:-25em ;}
+        100%{top:-31.7em ;}
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="ball"></div>
+        <div class="ball" style="background-color: aqua;"></div>
+        <div class="ball" style="background-color: rgb(7, 237, 110);"></div>
+        <div class="ball" style="background-color: rgb(244, 180, 5);"></div>
+        <div class="ball" style="background-color: rgb(231, 9, 197);"></div>
+        <div class="ball" style="background-color: rgb(162, 17, 17);"></div>
+        <div class="ball" style="background-color: rgb(93, 12, 175);"></div>
+    </div>
+</body>
+</html>

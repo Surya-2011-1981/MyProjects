@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+<style>
+    .box1::first-letter{
+        font-size: 50px;
+        color:darkorange;
+    }
+    div{
+        height: 200px;
+        width:400px;
+        font-size:20px;
+    }
+    .box2::first-line{
+        color: darkorange;
+        font-size: 30px;
+    }
+    .box3::after{
+        color: red;
+        content: "This is ::after pseudo element";
+    }
+    .box3::before{
+        color: blue;
+        content: "This is ::before pseudo element";
+    }
+    .box2::selection{
+        background-color: cyan;
+    }
+</style>
+</head>
+<body>
+    <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, perspiciatis accusamus libero facere porro maxime molestias. Placeat exercitationem earum nesciunt sapiente recusandae eum doloribus unde sit, quis velit a quam?
+    </div>
+    <div class="box2">
+        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab corporis voluptate, consequatur natus ex quo unde odio in iure minus quisquam vel earum dignissimos minima ipsam placeat voluptatum illo! Quas.
+    </div>
+    <div class="box3">
+        <p>Content</p>
+        <p>Full stack web development</p>  
+    </div>
+    
+</body>
+</html>

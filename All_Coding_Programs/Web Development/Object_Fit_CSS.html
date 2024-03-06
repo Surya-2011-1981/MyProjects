@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object-Fit and Object-Position Property</title>
+<style>
+.main img[alt=""]{
+    display: block;
+    margin: auto;
+    height: 300px;
+    width: 400px;
+    /* object-fit: contain; */
+    /*
+    object-fit:fill;
+    object-fit:scale-down;
+    object-fit:none; */
+    object-fit: cover;
+    object-position: bottom left;
+    border: 2px solid red;
+}
+img[alt="img2"]
+{
+    display: block;
+    margin: auto;
+    height: 300px;
+    width: 400px;
+    /* object-fit: contain;
+    object-fit:fill;
+    object-fit:scale-down;
+    object-fit:none; */
+    object-fit: cover;
+    object-position: top right;
+    position:relative;
+    top: 1em;
+    border: 2px solid red;
+}
+img[alt="image"]{
+    position:relative;
+    top: 3em;
+}
+</style>
+</head>
+<body>
+<div class="main">
+    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="" title="Same Image(Diiference can be shown)">
+    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="img2"  title="Same Image">
+    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="image" title="Original Image">
+
+</div>
+</body>

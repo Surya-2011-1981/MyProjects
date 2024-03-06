@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS filters</title>
+</head>
+<body>
+<style>
+    .main{
+        height: 60vh;
+        width: 70vw;
+        border: 3px solid black;
+        margin: auto;
+        display: grid;
+        grid-template-areas: "first second third "
+                            "four five six";
+        justify-content: space-evenly;
+        box-sizing: border-box;
+
+    }
+    .box{
+        height: 180px;
+        width: 300px;
+        /* border: 2px solid blue; */
+        margin-top: 10px;
+        box-sizing: border-box;
+        
+    }
+    .box img{
+        height:180px;
+        width:300px;
+        object-fit: cover;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+    #box1{
+        grid-area: first;
+        filter: blur(10px);
+    }
+    #box2{
+        grid-area: second;
+        filter:contrast(20%);
+    }
+    #box3{
+        grid-area: third;
+        filter: brightness(160%);
+    }
+    #box4{
+        grid-area:four;
+        filter: grayscale(0.6);
+    }
+    #box5{
+        grid-area: five;
+        filter: drop-shadow(12px 11px 26px red);
+    }
+    #box6{
+        grid-area:six;
+        filter: hue-rotate(60deg);
+    }
+    img[title]{
+        display: block;
+        margin: auto;
+    }
+</style>
+</body>
+<h1 align="center">Image with filters prperty</h1>
+<div class="main">
+    <div class="box" id="box1">
+        <img src="bird.jpg" alt="">
+    </div>
+    <div class="box" id="box2">
+        <img src="bird.jpg" alt="">
+    </div>
+    <div class="box" id="box3">
+        <img src="bird.jpg" alt="">
+    </div>
+    <div class="box" id="box4">
+        <img src="bird.jpg" alt="">
+    </div>
+    <div class="box" id="box5">
+        <img src="bird.jpg" alt="">
+    </div>
+    <div class="box" id="box6">
+        <img src="bird.jpg" alt="">
+    </div>
+</div>
+<br><br><br>
+<h1 align="center">Orignal Image</h1>
+<img src="bird.jpg" alt="bird" title="Original image">
+
+</html>

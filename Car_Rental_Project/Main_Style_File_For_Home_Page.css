@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    color: black;
+    transition: background;
+    transition-duration:0.5s;
+}
+
+:root {
+    --color-1: white;
+    --color-2: blue;
+    --color-3: orangered;
+    --color-3: rgb(255, 132, 0);
+}
+a {
+    text-decoration: none;
+}
+
+/* Styling For Body */
+body {
+    height: 100vh;
+    width: 100vw;
+    background: url("Main Background.jpg") no-repeat;
+    background-size: cover;
+    background-position:top;
+    display: grid;
+    grid-template-areas: "header header"
+        "message login_box";
+    flex-wrap: wrap;
+    /* background-position: bottom; */
+}
+
+
+/* Styling for header */
+body header {
+    max-height: 30vh;
+    grid-area: header;
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*  Styling for logo  */
+body header .logo {
+    width: 10vw;
+    height: 10vh;
+    position: relative;
+    bottom: 1.7em;
+}
+
+body header .logo h1 {
+    height: 100%;
+    width: 100%;
+    font-size: 4em;
+    text-shadow: 4px 5px 15px var(--color-3);
+    color: var(--color-3);
+}
+
+
+/*  Styling for navigation  */
+body header .navigation {
+    width: 45vw;
+    height: 11vh;
+    /* background-color: blanchedalmond; */
+    position: relative;
+    bottom: 1em;
+    left: -3em;
+}
+
+body header .navigation ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+body header .navigation ul li {
+    width: 8vw;
+    height: 6vh;
+    list-style-type: none;
+    border-radius: 7px;
+    background: linear-gradient(45deg, var(--color-1), var(--color-2));
+}
+
+body header .navigation ul li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+body header .admin {
+    width: 10vw;
+    height: 11vh;
+    position: relative;
+    right: 9em;
+    top: -4px;
+}
+
+body header .admin a {
+    height: 8vh;
+    width: 9vw;
+    border-radius: 7px;
+    background-color: rgb(255 181 87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    /* color:white; */
+}
+
+/* Styling Of Header Part Ends Here */
+
+
+/* Styling Of Message Part Starts Here */
+
+body .message {
+    grid-area: message;
+    height: 70vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    position: relative;
+    left: 7vw;
+    font-family: monospace;
+}
+
+body .message h1 {
+    font-size: 3em;
+    height: 7vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Rent Your */
+body .message> :nth-child(1) {
+    color: black;
+}
+
+
+/* Dream Car */
+body .message> :nth-child(2) {
+    position: relative;
+    bottom: 0.1em;
+    color: #ff8900;
+}
+
+
+/* Live the life... */
+body .message div {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    font-family: sans-serif;
+    position: relative;
+    top: 1em;
+    font-size: 1.2em;
+    color: white !important;
+}
+
+
+
+/* Join us */
+body .message .join_us {
+    display: flex;
+    height: 6vh;
+    width: 9vw;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    top: 1em;
+    position: relative;
+    align-items: center;
+    /* justify-content: space-around; */
+    background: linear-gradient(45deg, var(--color-1), var(--color-2));
+}
+body .message .join_us a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+/* Styling Of Message Part Ends Here */
+
+
+/* Styling Of Login Box Starts Here */
+body .login_box {
+    grid-area: login_box;
+    height: 70vh;
+    width: 22vw;
+    border-radius: 6px;
+    position: relative;
+    left: -2em;
+    background: #000000ac;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content:center; */
+    gap: 1em;
+}
+
+/* email and password icon */
+img {
+    height: 7%;
+    width: 7%;
+    float: left;
+    filter: invert(1);
+    position: relative;
+    top: -2em;
+    left: 8.5em;
+}
+
+
+/* Login here */
+body .login_box> :first-child {
+    height: 8%;
+    width: 60%;
+    background: linear-gradient(45deg, var(--color-1), var(--color-2));
+    border-radius: 6px;
+    position: relative;
+    top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #ff3c00d8;
+}
+
+
+/* form Style */
+body .login_box> :nth-child(2) {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+    position: relative;
+    top: 1.4em;
+}
+
+/* Form Input */
+body .login_box> :nth-child(2)>input {
+    display: block;
+    height: 15%;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-weight: normal;
+    font-family: 'Gill Sans';
+    font-size: 17px;
+}
+
+/* Form Submit */
+body .login_box> :nth-child(2)>button {
+    height: 17%;
+    width: 35%;
+    background: transparent;
+    color: white;
+    border:1px solid white;
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    top: 0em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Remember and forgot password */
+body .login_box .other_option {
+    height: 10%;
+    position: relative;
+    top: -3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    justify-content:space-around;
+}
+body .login_box .other_option p {
+    display: inline-block;
+}
+
+/* Remember me */
+body .login_box .other_option p input {
+    border-radius: 4px;
+}
+
+/* Label for checkbox Remember me  */
+body .login_box .other_option p label{
+    color: white;
+    font-weight: normal;
+    font-family: math;
+    position: relative;
+    bottom: 1px;
+
+}
+
+/* Forgot Password  */
+body .login_box .other_option a{
+    color: white;
+    font-weight: normal;
+    font-family: math;
+}
+
+/* New Sign in and don't have an account style */
+body .login_box .signup-having_account{
+    height: 15%;
+    width: 100%;
+    position: relative;
+    bottom: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+/* Don't have an account  */
+body .login_box .signup-having_account .account-existence {
+    width:90%;
+    height:25%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+body .login_box .signup-having_account .account-existence p{
+    color: white;
+}
+
+/* New Sign in  */
+body .login_box .signup-having_account .signup{
+    width: 90%;
+    height:25%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom:1em;
+}
+body .login_box .signup-having_account .signup p{
+    color: white;
+} 
+
+/* New sign in hyperlink */
+body .login_box .signup a{
+    color:yellow;
+}

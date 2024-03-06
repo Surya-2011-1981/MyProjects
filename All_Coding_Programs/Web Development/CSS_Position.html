@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            height: 150vh;
+            width: 70vw;
+            margin: auto;
+            margin-top: 10px;
+            border: 2px solid red;
+            box-sizing: border-box;
+            /* position:; */
+        }
+
+        .box {
+
+            height: 25vh;
+            width: 40rem;
+            margin: auto;
+            border: 1px solid black;
+            margin-top: 85px;
+            box-sizing: border-box;
+            font-family: elephant;
+            font-size: 40px;
+            padding-top: 15px;
+        }
+
+        #box1 {
+            position: relative;
+            top: 32px;
+            margin-top: 0px;
+            background-color: cyan;
+            left: 20px;
+        }
+
+        #box2 {
+            position: absolute;
+            left: 30px;
+            top: 170px;
+            z-index: 1;
+            background-color: blanchedalmond;
+        }
+
+        #box3 {
+            background-color: blue;
+            position: fixed;
+            top: 406px;
+            left: 48vw;
+        }
+
+        #box4 {
+            background-color: pink;
+            position: sticky;
+            top: 0px;
+            text-align: right;
+             z-index: 1;
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box" id="box1">
+            Relative from parent (Parent Div in this page )
+        </div>
+        <div class="box" id="box2">  
+            Absolute from positioned ancentor (HTML)
+        </div>
+        <div class="box" id="box3">
+            Fixed position 
+        </div>
+        <div class="box" id="box4">
+            Sticky 
+        </div>
+    </div>
+</body>
+
+</html>

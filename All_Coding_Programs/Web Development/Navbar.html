@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        p{
+            height: 50px;
+            width: 200px;
+            background:linear-gradient(45deg,rgb(129, 20, 20),red);
+            border: 2px solid red;
+            border-radius: 8px;
+            box-sizing: border-box;
+
+        }
+        div{
+            height: 150px;
+            width: 300px;
+            background-color: cyan;
+            border-radius: 14px;
+            transition: all 1s;
+        }
+        p:hover~div{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+<p></p>
+<div></div>    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>preventDefault() With oncontextmenu</title>
+  <style>
+
+  body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap:10px;
+    background-color: black;
+    color: white;
+  }
+  p{
+    background-color: black;
+    color: white!important;
+  }
+  .body-background{
+    background-color: white;
+    color: black;
+  }
+  </style>
+</head>
+<body>
+
+     <h2>This is Para1</h2>Lorem ipsum dolor sitecto consequuntur nesciunt itaque, in, mollitia aliquid explicabo officia saepe, amet accusantium iure asperiores ipsum et necessitatibus ad non nihil? Laudantium vero consectetur dolorum quam debitis nulla vitae cumque molestiae fugit. Sed suscipit quos ullam adipisci odit optio porro, a delectus sapiente tenetur consequuntur in totam laboriosam ipsa quod! Voluptatem, fugit. Quod temporibus nesciunt, vel excepturi amet facilis ad hic odit enim deleniti, minus natus magni animi. Quam, error ratione ipsam quos, ipsa quisquam fugit tempore similique quidem dolor fugiat voluptas! Deleniti quam voluptatibus nihil veniam odio, enim ducimus suscipit possimus, est aperiam, assumenda eveniet fugiat iure velit? Reprehenderit porro natus ea nemo est, asperiores debitis illum officia, nihil dicta omnis totam repellendus odit vero. Veritatis eum laboriosam, ut labore voluptas facere beatae culpa velit modi natus nisi commodi facilis atque quibusdam tenetur alias cumque at quo unde, amet exercitationem suscipit. Vero eaque quam error ipsa perferendis. Doloribus unde minus nobis in quae perferendis placeat repellendus eveniet!
+  
+    <h2>
+    This is Para2
+  </h2>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae culpa voluptas nesciunt, consectetur corrupti provident earum impedit quibusdam recusandae enim minima incidunt expedita. Cum, ipsam, dolores nam officia quis debitis cupiditatetae rem corporis eos a aliquid, praesentium facilis ab cupiditate? Id in sunt ab. Magnam facilis a dolor quis atque voluptatem omnis explicabo dolores animi ad earum, dolore, nostrum vero est suscipit enim mollitia rerum laborum in deserunt blanditiis voluptates nam at! Incidunt id quis explicabo possimus libero quas placeat facere vitae rerum, ratione aliquid nisi laborum illo, unde tenetur! Commodi nemo minus laboriosam deserunt quod, sint consequatur accusamus iste.
+
+    <h2>
+    This is Para3
+  </h2>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quas quia reprehenderit ea sed, quaerat corrupti est quasi tenetur praesentium officia tempora in maiores soluta explicabo vel libero! Eveniet, doloremque minima! Officiis at voluptates doloribus praesentium magni nemo officia tempora eligendi labore fuga possimus dignissimos veniam odit molestias in perspiciatis facilis quod placeat, dolores quo provident aperiam a! Vel, odit! In, repchitecto nesciunt, minima consectetur quia, autem delectus mollitia accusantium assumenda placeat ullam laudantium incidunt quaerat eligendi, dignissimos iure id error quidem similique officiis eos? Vel qui culpa suscipit exercitationem repudiandae dsquam obcaecati aut quibusdam ut odio officia dolorem aperiam cumque sit autem laboriosam ullam officiis repellendus vero, explicabo saepe animi velit doloribus id qui atque at quos. Modi nobis, consectetur, doloribus omnis nulla dolor fugit tenetur recusandae quos nesciunt provident neque, illo sed architecto minima laudantium dolores! Obcaecati distinctio temporibus quae voluptatibus a non molestiae, repellat consequuntur repudiandae eos deleniti eius at blanditiis, velit autem. Odio, laboriosam?</p>
+
+    <h2>
+      This is Para4
+    </h2>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusantium porro illum. Voluptate dolor alias autemciis temporibus at autem impedit, cumque cupiditate error minima eveniet explicabo. Laudantium similique ad unde, harum porro officia. 
+
+</body>
+<script>
+let Body=document.querySelector("body");
+Body.addEventListener("contextmenu",(e)=>{
+  e.preventDefault();
+  Body.classList.toggle("body-background");
+});
+</script>
+</html>

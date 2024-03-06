@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <style>
+        :root {
+            --boxheight: 600px;
+            --boxwidth: 800px;
+            --boxmargin: 20px;
+            --boxsize: border-box;
+            --border: 4px solid rgb(201, 10, 23);
+            --borad: 15px;
+            --boxpadd: 10px 15px;
+            --font: 35px;
+            --fonfam: elephant;
+            --color1: #00b4ff;
+            --color2: #4fc3f796;
+            --color3: rgb(76 134 218 / 12%);
+            --marg: auto;
+            --of: auto;
+
+        }
+
+        .box {
+            height: var(--boxheight);
+            width: var(--boxwidth);
+            margin: var(--boxmargin);
+            box-sizing: var(--boxsize);
+            border: var(--border);
+            border-radius: var(--borad);
+            padding: var(--boxpadd);
+            font-size: var(--font);
+            font-family: var(--fonfam);
+            margin: var(--marg);
+            margin-top: 20px;
+            letter-spacing: 1px;
+            word-spacing: 5px;
+            overflow: var(--of);
+
+        }
+
+        #b1:first-child{
+            background-color: var(--color1);
+        }
+        #b2:nth-child(2){
+            background-color: var(--color2);
+        }
+        #b3:nth-child(3){
+            background-color: var(--color3);
+        }
+        /* #b1 {
+            background-color: var(--color1);
+        }
+
+        #b2 {
+            background-color: var(--color2);
+        }
+
+        #b3 {
+            background-color: var(--color3);
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box" id="b1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam earum repudiandae enim fuga! Expedita
+        sapiente voluptate non quibusdam eveniet doloremque autem fugiat at ut iusto omnis dolore, vel magni molestias
+        rerum. Vitae natus magnam voluptate illum facere voluptatibus quod sint repellendus debitis suscipit quasi sunt
+        asperiores fugit ea, enim omnis atque! Asperiores a minus omnis impedit, est magni quod! In.
+    </div>
+    <div class="box" id="b2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum accusamus, consequatur a corporis porro eos
+        similique nobis praesentium labore reiciendis suscipit impedit ut vitae non quisquam quibusdam ducimus
+        architecto. Quaerat officiis asperiores sint suscipit sequi tenetur error recusandae autem molestias architecto
+        voluptate magni consequuntur ipsum magnam ipsa, esse corporis sit ea laborum reprehenderit deserunt dolore
+        possimus nam veritatis! Eaque, doloribus voluptatum! Quibusdam esse voluptas minima iusto eum eveniet nobis
+        laborum!
+    </div>
+    <div class="box" id="b3">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi nulla veniam inventore numquam dolorem itaque
+        aut vitae sequi incidunt dolor quis, error neque quaerat nemo repudiandae esse commodi aperiam voluptates ab?
+        Rem voluptatibus earum, quod doloribus blanditiis neque sapiente amet enim repudiandae ut exercitationem illo
+        corrupti possimus mollitia dolores dolorem, voluptates cupiditate inventore aliquam eum vero labore velit minima
+        dolore. Esse, eos cum ad non, dolor sequi atque velit quaerat harum culpa blanditiis necessitatibus, dolores
+        ullam libero autem optio reprehenderit.
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+body header nav ul li :hover{
+    background:white;
+    border-bottom: 1px solid blue;
+}
+
+body header .admin  :hover{
+    background:orangered;
+}
+
+
+body .message .join_us :hover{
+    background:white;
+    border-bottom: 1px solid blue;
+}
+
+body .login_box form button:hover{
+    background-color: white;
+    color: black;
+}
+
+body .login_box .other_option a:hover{
+    color: orangered;
+}
+
+body .login_box .signup-having_account .signup p a:hover{
+    color:orangered;
+}

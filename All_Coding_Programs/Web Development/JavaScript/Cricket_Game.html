@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .bot {
+            height: 180px;
+            width: 300px;
+            margin: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bot img {
+            /* object-fit: contain; */
+            border-radius: 9px;
+        }
+
+        .box {
+            top: 50px;
+            position: relative;
+            height: 30vh;
+            width: 40vw;
+            border: 2px solid black;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.8em;
+            margin: auto;
+            background-color: blanchedalmond;
+        }
+
+        nav {
+            height: 30%;
+            /* border:2px solid black; */
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        button {
+            height: 100%;
+            width: 20%;
+            background-color: cyan;
+            font-weight: bold;
+            font-size: 1em;
+            color: rgb(82, 90, 209);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(226, 123, 20);
+            color: white;
+        }
+
+        body>h1 {
+            font-family: elephant;
+            letter-spacing: 2px;
+            word-spacing: 6px;
+            font-size: 23px;
+            color: orangered;
+            font-weight: bolder;
+            display: inline-block;
+            margin: auto;
+            position: relative;
+            left: 17em;
+            font-weight: bold;
+            top: 1em;
+        }
+
+        img {
+            animation-name: style;
+            animation-duration: 0.8s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+        }
+
+        @keyframes style {
+            10% {height: 150px; width: 150px;}
+
+            20% {height: 152px; width: 152px;}
+
+            30% {height: 154px; width: 154px;}
+
+            40% {height: 156px; width: 156px;}
+
+            50% {height: 158px; width: 158px;}
+
+            60% {height: 160px; width: 160px;}
+
+            70% {height: 162px; width: 162px;}
+
+            80% {height: 164px; width: 164px;}
+
+            90% {height: 166px; width: 168px;}
+
+            100% {height: 168px;width: 170px;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bot">
+        <img src="bot.jpeg" alt="">
+    </div>
+    <h1>The bot have already
+        Selected his choice it's your turn</h1>
+    <div class="box">
+        <h1>Double Click On any of the button</h1>
+        <nav>
+            <button id="Bat" onclick="game()">Bat</button>
+            <button id="Ball" onclick="game()">Ball</button>
+            <button id="Field" onclick="game()">Field</button>
+        </nav>
+    </div>
+</body>
+<script>
+    let game = () => {
+        let bot = Math.floor(Math.random() * 3) + 1;
+
+        let sel1 = document.getElementById("Bat");
+        let sel2 = document.getElementById("Ball");
+        let sel3 = document.getElementById("Field");
+        let user;
+
+        // Selection of game part by the bot
+        if (bot == 1) {
+            bot = "Bat";
+        }
+        else if (bot == 2) {
+            bot = "Ball";
+        }
+        else {
+            bot = "Field";
+        }
+
+        function check() {
+            document.write("<h3>Please wait while checking the inputs. . .</h3>")
+            setTimeout(() => {
+                document.write("<br>You have pressed  : " + `<h1 style="display:inline;">${user}</h1>`);
+            }, 2000)
+            setTimeout(() => {
+                document.write("<br>and the bot has selected : " + `<h1 style="display:inline;">${bot}</h1>`);
+            }, 4000)
+            setTimeout(() => {
+                if (bot == user) {
+                    alert("Yayyy....! You have won 🥳🥳🥳");
+                }
+                else {
+                    alert("Sorry...! The bot has defeated you 😛😛");
+                }
+            }, 5000)
+        }
+        // Selection of game part by the User
+        sel1.onclick = () => {
+            user = "Bat";
+            check();
+        }
+        sel2.onclick = () => {
+            user = "Ball";
+            check();
+        }
+        sel3.onclick = () => {
+            user = "Field";
+            check();
+        }
+
+    }
+    // console.log(bot);
+
+</script>
+
+</html>

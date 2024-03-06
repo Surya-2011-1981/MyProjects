@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Calculator
+  </title>
+  <style>
+  .main{
+    border: 3px solid rgb(26, 24, 24);
+    border-radius: 9px;
+    margin: auto;
+    height: 380px;
+    width: 300px;
+    margin-top:30px;
+    background-color: aqua;
+
+  }
+  button{
+    box-shadow: 2px 0px 5px gray;
+    height: 50px;
+    width: 55px;
+    margin:15px 10px 15px 6px;
+    border: 2px solid rgb(24, 20, 20);
+    border-radius: 6px;
+    font-size: 25px;
+    font-family:elephant;
+  }
+  
+  .box{
+    margin-left:2px;
+  }
+  input{
+    box-shadow: 2px 0px 5px gray;
+    height: 50px;
+    width: 290px;
+    margin: auto;
+    margin-top: 1px;
+    border:2px solid rgb(22, 21, 21);
+    border-radius:9px;
+
+  }
+  button:hover{
+    color:white;
+    background-color: rgb(98, 94, 94);
+  }
+  </style>
+</head>
+<body>
+ <div class="main">
+  <div class="box" id="output_display">
+    <input type="text" id="output" readonly>
+  </div>
+  <div class="box" id="row1">
+    <button class="btn" onclick="appendToDisplay()">1</button>
+    <button class="btn" onclick="appendToDisplay()">2</button>
+    <button class="btn" onclick="appendToDisplay()">3</button>
+    <button class="btn" onclick="appendToDisplay()">/</button>
+  </div>
+  <div class="box" id="row2">
+    <button class="btn" onclick="appendToDisplay()">4</button>
+    <button class="btn" onclick="appendToDisplay()">5</button>
+    <button class="btn" onclick="appendToDisplay()">6</button>
+    <button class="btn" onclick="appendToDisplay()">x</button>
+  </div>
+  <div class="box" id="row3">
+    <button class="btn" onclick="appendToDisplay()">7</button>
+    <button class="btn" onclick="appendToDisplay()">8</button>
+    <button class="btn" onclick="appendToDisplay()">9</button>
+    <button class="btn" onclick="appendToDisplay()">-</button>
+  </div>
+  <div class="box" id="row4">
+    <button style="font-size: 20px;">Del</button>
+    <button>C</button>
+    <button>0</button>
+    <button id="add">+</button>
+  </div>
+ </div>
+</body>
+<script>
+  function appendToDisplay(){
+    var val=document.querySelectorAll('.btn').values;
+    document.getElementById('output').innerHTML=val;
+  } 
+</script>
+</html>

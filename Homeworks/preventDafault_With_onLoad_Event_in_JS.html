@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaScript onload Event </title>
+</head>
+<body>
+  <audio controls id="audio" autoplay="autoplay" preload="auto" >
+    <source src="5_sec_Intro_Music(256k).mp3" type="audio/mp3">
+    Browser doesn't Support 
+  </audio>  
+</body>
+<script>
+//   console.log("Content Loaded");
+document.body.onload=()=>{
+  // document.body.style.background="Yellow";
+  let aud=document.getElementById("audio").muted=true;
+  // {
+    // aud.setAttribute("muted",true);
+    // console.log();
+    // document.querySelector("audio").setAttribute("muted","muted");
+  // }
+}
+</script>
+</html>
+

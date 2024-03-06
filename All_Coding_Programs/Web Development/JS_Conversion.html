@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+<button onclick="creation()">
+	Click Here to Create Id and password
+</button>	
+<button onclick="login()">Click here to log in </button>
+</body>
+<script type="text/javascript">
+	var id,password;
+	var L_Id,L_Pass;
+	var count=0;
+	function creation()
+	{
+	id=prompt("Create an ID ","");
+	password=prompt("Create a password","");
+	alert("You have successfully created your id and password.......!")
+	count++;
+	}
+	while(count!=1)
+	{
+	function login()
+	{
+		L_Id=prompt("Enter your id","");
+		if(L_Id==id)
+		{
+			L_Pass=prompt("Enter your password");
+			if(L_Pass==password)
+				alert("You have successfully logged in ........!");
+			else
+			{
+				alert("You have entered wrong password.....");
+				exit();
+			}
+		}
+		else
+		{
+			alert("You id doesn't match or found in database");
+			exit();
+		}
+	}
+}
+</script>
+</html>

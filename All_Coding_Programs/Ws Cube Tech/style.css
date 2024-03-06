@@ -1,0 +1,124 @@
+/* Resetetting Margin And Padding  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/* Message Box  */
+header .message{
+    height: 4.5vh;
+    width: 100vw;
+    background-color:#0065bb;
+    display:grid; 
+    grid-template-areas:"one two three four";
+    align-items:start;
+    justify-content: center;
+     gap: 1em;
+}
+ header .message *{
+    position:relative;
+    top: 8px;
+    font-family: Inter , sans-serif;
+    font-size: 0.6em;
+    font-weight: bold;
+    
+}
+header .message #blink{
+    height:1.3em;
+    width:1.3em;
+    border-radius: 50%;
+    grid-area: one;
+    top: 0.8em;
+    left: 1.2em;
+    animation-name: blink;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+   10%{background-color: gold;}
+   20%{background-color: #0065bb;}
+   30%{background-color: gold;}
+   40%{background-color: #0065bb;}
+   50%{background-color: gold;}
+   60%{background-color: #0065bb;}
+   70%{background-color: gold;}
+   80%{background-color: #0065bb;}
+   90%{background-color: gold;}
+   100%{background-color:#0065bb;}
+    
+}
+header .message #normaltext{
+    height:60%;
+    width:6.3vw;
+    grid-area: two;
+    top: 9px;
+    color: white;
+
+}
+header .message #boldtext{
+    grid-area: three;
+    color: gold;
+    height: 60%;
+    width: 15vw;
+    right: 1.2em;
+    font-size: 0.8em;
+}
+header .message #enroll{
+    background-color: white;
+    color: black;
+    height: 85%;
+    font-size: 10px;
+    padding-top: 7px;
+    text-align: center;
+    width: 6vw;
+    border-radius: 0.4em;
+    text-decoration: none;
+    position: relative;
+    top: 0.2em;
+    right: 3em;
+    font-weight: normal;
+}   
+@media only screen and (max-width:576px){
+    header .message{
+        display: flex;
+        gap: 2em;
+        height: 10vh;
+        justify-content:flex-start;
+        background-color: cyan;
+    }
+    header .message #blink{
+        height: 10px;
+        width: 15px;
+        top: 25px;
+        left:20px;
+        
+    }
+    header .message #normaltext{
+        width:100px;
+        height:25px;
+        /* border: 1px solid black; */
+        top: 23px;
+        left: 0px;
+        color: blue;
+    }
+    header .message #boldtext{
+        width:270px;
+        height:35px;
+        /* border: 1px solid black; */
+        top: 20px;
+        right: 30px;
+        font-size: 15px;
+    }
+    header .message #enroll{
+        width:120px;
+        height:40px;
+        border: 2px solid black;
+        top: 20px;
+        right:60px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+   
+}

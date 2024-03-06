@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>NavBar Using FlexBox</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      /*      background: lightcyan;*/
+      box-sizing: border-box;
+    }
+
+    .nav {
+      height: 13%;
+      /*      background: white;*/
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      text-align: right;
+      box-sizing: border-box;
+      /*      border: 1px solid black;*/
+    }
+
+    .box {
+      margin: 1em 1.5em 0.5em 0em;
+      /*      border: 1px solid black;*/
+      font-size: 1.1em;
+      width: 7%;
+      height: 50%;
+      text-align: center;
+
+    }
+
+    #box5 {
+      background: url("UE.png") no-repeat !important;
+      position: relative;
+      right: 37em;
+      top: -12px;
+      border: none;
+      height: 95%;
+      width: 20%;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      margin-left: 4em;
+      font-family: monospace;
+      padding: 0.3em 0em 0em 0.1em;
+      font-size: 1.4em;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    p {
+      font-family: sans-serif;
+      font-style: italic;
+      font-size: 13px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .box a:hover {
+      background-color: lightblue;
+      /*    border: 1px solid blue;*/
+      height: 100%;
+      width: 120%;
+      font-size: 1.3em;
+      border-radius: 5px;
+      display: block;
+      box-sizing: border-box; 
+      padding-top: 0.4em;
+    }
+
+    .container {
+      height: 45%;
+      width: 100%;
+      /*    border: 1px solid black;*/
+    }
+
+    .container>div {
+      height: 33%;
+      width: 99%;
+      /*    border: 1px solid red;*/
+      text-align: center;
+    }
+
+    .container>div>p {
+      font-size: 2.5em;
+      font-family: serif;
+      word-spacing: 0.6em;
+      box-sizing: border-box;
+      padding-top: 0.4em;
+      font-style: normal;
+    }
+
+    span {
+      font-weight: bold;
+    }
+
+    .review {
+      height: 80%;
+      width: 30%;
+      background: url("R.png") no-repeat;
+    }
+
+    .child2 {
+      font-size: 2em;
+      text-align: center;
+    }
+
+    pre {
+      font-family: serif;
+    }
+    #download:hover{
+      background-color: aqua;
+      color: orangered;
+      font-size: 1.3em;
+      padding-top:0.7em ;
+    }
+
+    #download {
+      height: 50%;
+      display: block;
+      width: 20%;
+      margin: auto;
+      margin-top: 1em;
+      color: white;
+      border-radius: 1em;
+      /*    border: 1px solid white;*/
+      background: blue;
+      padding-top: 1em;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+    img{
+      position:relative;
+      top: 0.1em;
+      left: 0.2em;
+      border-radius: 10px;
+      font-size: 10px;
+      word-spacing: normal;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="box">
+      <a href="#">
+        About Us
+      </a>
+    </div>
+    <div class="box">
+      <a href="#">
+        Resources
+      </a>
+    </div>
+    <div class="box">
+      <a href="#">
+        Pricing
+      </a>
+    </div>
+    <div class="box">
+      <a href="#">
+        Products
+      </a>
+    </div>
+    <div class="box" id="box5">
+      <aside class="logo">
+        <p>
+        <h1>UltraEdit</h1>
+        </p>
+        <p>An idera Inc. Company</p>
+
+      </aside>
+    </div>
+  </div>
+  <div class="container">
+    <div class="child1">
+      <p>
+        Download <span>UltraEdit</span> for Windows<img src="R.png" height="30px" width="70px" alt="unable to load">
+      <aside>
+        <div class="review">
+        </div>
+      </aside>
+      </p>
+
+    </div>
+    <div class="child2">
+      <pre> Download and try Ultraedit before you buy it! This download includes the full Windows 
+      version of the text editor</pre>
+      <br>
+    </div>
+    <div class="child3">
+      <a href="#" id="download">
+        Download Linux or Mac Version
+      </a>
+    </div>
+  </div>
+
+</body>
+
+</html>

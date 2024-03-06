@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: 80vh;
+            width: 60vw;
+            border: 3px solid black;
+            border-radius: 10px;
+            background-color: rgb(100, 166, 223);
+            margin: auto;
+            display: flex;
+        }
+
+        .box {
+            margin: 10px 20px;
+            height: 30%;
+            width: 30%;
+            overflow: hidden;
+            font-size: 1.1em;
+            padding-left: 4px;
+            border: 3px solid mediumvioletred;
+            background-color: aqua;
+
+        }
+        @media only screen and (max-width:500px)
+        {
+            .main{
+                flex-direction: column;
+            }
+            #box1{
+                background-color:rgb(229, 229, 129);
+            }
+            #box2{
+                background-color:rgb(48, 77, 84);
+            }
+            #box3{
+                background-color:rgb(217, 93, 52);
+            }
+        }
+    </style>
+</head>
+
+<body class="con">
+    <div class="main">
+        <div class="box" id="box1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus tempore aut harum qui tempora!
+            Incidunt numquam, molestias quo nostrum soluta architecto, sit earum deleniti maxime est fugit provident!
+            Deserunt nulla dolorem expedita reiciendis quis molestiae laboriosam corrupti dolorum obcaecati quaerat
+            optio unde adipisci laborum magnam asperiores assumenda corporis, doloribus ex earum quas, dicta distinctio!
+            Eum ut maxime repellendus a?
+        </div>
+        <div class="box" id="box2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem tempore, deleniti assumenda mollitia qui
+            pariatur eveniet dolorem maiores illum. Earum corporis cupiditate aliquam laboriosam quidem autem? Et
+            aliquam ipsa ea doloremque nihil ullam iure? Delectus placeat aut numquam, doloribus laudantium obcaecati
+            sint quia quaerat iusto laborum assumenda facere, illum odit quisquam enim? Iusto consequuntur dolorem,
+            adipisci cum repellendus eveniet mollitia.
+        </div>
+        <div class="box" id="box3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis itaque cupiditate debitis corporis rem
+            esse quas impedit natus, iusto, dignissimos, repellendus labore. Quae, saepe sit deleniti totam odio nihil,
+            ducimus qui eaque hic nobis explicabo dolorem magni recusandae laborum exercitationem nisi sint. Magni culpa
+            eveniet sed reprehenderit magnam rem nesciunt obcaecati in voluptas accusamus? Neque non unde voluptatibus
+            beatae reiciendis!
+        </div>
+    </div>
+</body>
+
+</html>

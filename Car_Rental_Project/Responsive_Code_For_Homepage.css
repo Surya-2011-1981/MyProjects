@@ -1,0 +1,196 @@
+@media only screen and (max-width:1350px)
+{
+    body .login_box{
+        width: 25vw;
+    }
+}
+@media only screen and (max-width:1250px)
+{
+    body .login_box{
+        width: 28vw;
+    }
+    body .login_box img{
+        display:none;
+    }
+    body .login_box> :nth-child(2)>button{
+        top: 2em;
+    }
+}
+@media only screen and (max-width:1150px)
+{
+    body .login_box{
+        width: 30vw;
+    }
+}
+@media only screen and (max-width:1050px)
+{
+     body .login_box{
+        width: 40vw;
+        left: -2em;
+    }
+    body header{
+        justify-content:space-between;
+    }
+    body header .navigation ul li a{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    body header .admin a{
+        font-size: 18px;
+    }
+    
+}
+
+@media only screen and (max-width:890px)
+{
+    body {
+        background-position:right;
+        height: 100%;
+        width: 100%;
+    } 
+
+    body header {
+        flex-direction: column;
+        position:relative;
+        top: 0em;
+        /* border: 2px solid yellow; */
+        height: 30vh;
+        align-items: flex-start;
+    }
+    body header .logo{
+        width: 100%;
+        height: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        top: 0;
+        bottom: 0;
+        /* border: 1px solid red; */
+    }
+    body header .navigation{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right:0;
+    }
+    body header .navigation ul{
+        width: 100%;
+        height: 100%;
+        /* justify-content:space-between; */
+        gap: 2em;
+        flex-wrap: wrap;
+    }
+    body header .navigation ul li{
+        width: 16%;
+        height:5vh;
+    }
+    body header .admin{
+        width: 40%;
+        justify-content:flex-start;
+        top: 0;
+        left: 0;
+        right:6em;
+        bottom: 0;
+        /* border: 1px solid cyan; */
+        
+    }
+    body header .admin a{
+        width: 70%;
+    }
+
+    body .message{
+        /* border: 1px solid cyan; */
+        top: 0;
+        bottom: 0;
+        left:10px;
+        right: 0;
+        width:50vw;
+        height:80vh;
+    }
+    body .message .join_us{
+        width: 30%;
+    }
+    body .login_box{
+        top:-4em;
+        left:0em;
+    }
+}
+@media only screen and (max-width:635px)
+{
+    body .login_box{
+        width: 40vw;
+    }
+    body .message .join_us{
+        top: 2.5em;
+    }
+    body .login_box .other_option p label{
+        font-size: 11px;
+    }
+    body .login_box .other_option a{
+        font-size: 11px;
+    }
+}
+@media only screen and (max-width:550px){
+    body{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        background-position:center;
+    }
+    body > *{
+        width: 100%;
+        /* border:1px solid black; */
+    }
+    body .message{
+        width: 100%;
+        height:48vh;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        gap:10px;
+    }
+    body .message div{
+        top:0;
+    }
+    body .message .join_us {
+        top:0em;
+    }
+    body .login_box {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 80vw;
+        height: 60vh;
+    }
+    body .login_box .other_option p label{
+        font-size:14px;
+    }
+    body .login_box .other_option a{
+        font-size: 16px;
+    }
+    body .login_box .signup-having_account .signup {
+        top:0.4em;
+    }
+}
+
+@media only screen and (max-width:530px)
+{
+    body .login_box{
+        /* width:250px; */
+        width:80%;
+    }
+}
+@media only screen and (max-width:349px)
+{
+    body .login_box{
+        width: 90%;
+    }
+}

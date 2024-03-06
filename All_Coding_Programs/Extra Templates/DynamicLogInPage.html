@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      body {
+        background: url("https://img.freepik.com/premium-photo/beautiful-design-template-with-glass-light-blue-band-soft-blue-background-light-backdrop-neon-blue-light-abstract-design-element-ai-illustration-design_155807-7748.jpg")
+          no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        height: 65%;
+        width: 28%;
+        border: 2px solid rgba(157, 160, 160, 0.552);
+        border-radius: 7px;
+        /* background-color: red; */
+        background: transparent;
+        backdrop-filter: blur(5px);
+        display: grid;
+        grid-template-areas:
+          "text text"
+          "Email Email"
+          "pass pass"
+          "Rem  Rem"
+          " login login"
+          "register register";
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      h3 {
+        grid-area: text;
+        font-weight: 700;
+        margin: auto;
+        color: whitesmoke;
+        font-size: 1.4em;
+        font-family: sans-serif;
+      }
+
+      #Email {
+        grid-area: Email;
+        position: relative;
+      }
+
+      #pass {
+        grid-area: pass;
+      }
+
+      #Rem {
+        grid-area: Rem;
+        position: relative;
+        bottom: 20px;
+      }
+
+      #login {
+        grid-area: login;
+        height: 40px;
+        position: relative;
+        bottom: 30px;
+        width: 80%;
+        background-color: white;
+        margin: auto;
+        border-radius: 15px;
+        border: 2px solid gray;
+      }
+
+      #login button {
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        font-size: 18px;
+        font-family: sans-serif;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        color: rgba(0, 0, 0, 0.604);
+        cursor: pointer;
+      }
+
+      #register {
+        grid-area: register;
+        color: rgba(255, 255, 255, 0.499);
+        font-family: sans-serif;
+        font-weight: 500;
+        position: relative;
+        bottom: 50px;
+        left: 75px;
+      }
+
+      #register a {
+        position: relative;
+        left: 10px;
+        text-decoration: none;
+        color: white;
+      }
+
+      input {
+        /* backdrop-filter: ; */
+        background: transparent;
+        margin: auto;
+        height: 40px;
+        width: 350px;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid white;
+        font-family: sans-serif;
+        color: white;
+        position: relative;
+        left: 20px;
+      }
+
+      p img {
+        /* filter: invert(1); */
+        position: relative;
+        right: 5px;
+        font-weight: bold;
+        background: transparent;
+      }
+
+      label {
+        font-size: 1em;
+        color: white;
+        font-family: sans-serif;
+        position: relative;
+        left: 24px;
+      }
+
+      input[type="checkbox"] {
+        height: 15px;
+        width: 20px;
+      }
+
+      #Rem a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        left: 100px;
+      }
+
+      a {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h3>Login</h3>
+      <p id="Email">
+        <input type="email" placeholder="Email" /><img
+          src="data:image/png;base64,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"
+          alt="email"
+          height="20px"
+          width="20px"
+        />
+      </p>
+      <p id="pass">
+        <input type="password" placeholder="Password" />
+        <img
+          src="data:image/png;base64,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"
+          alt="password"
+          height="20px"
+          width="20px"
+        />
+      </p>
+      <p id="Rem">
+        <input type="checkbox" /><label>Remember me </label>
+        <a href="#">Forgot Password ?</a>
+      </p>
+      <p id="login">
+        <button>Login</button>
+      </p>
+      <p id="register">Don't have an account? <a href="#">Register</a></p>
+    </div>
+  </body>
+</html>

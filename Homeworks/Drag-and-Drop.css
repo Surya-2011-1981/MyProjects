@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 50vh;
+  margin: auto;
+  width: 60vw;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: cadetblue;
+  display: flex;
+  gap: 3em;
+}
+
+.boxes {
+  height: 150px;
+  width: 143px;
+  border: 1px solid red;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+img {
+  height: 80%;
+
+  width: 80%;
+}
+
+.display-none {
+  display: none;
+}

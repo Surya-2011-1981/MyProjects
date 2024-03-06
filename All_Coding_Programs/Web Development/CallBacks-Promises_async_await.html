@@ -1,0 +1,97 @@
+!	<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>promises-async-await-callbacks</title>
+</head>
+<body>
+	hello
+</body>
+<script>
+    let arr=[1,"Suraj",'A',426,8.36];
+/*
+    let getdata=(id,callback)=>{
+       console.log("loading data of id number "+id+" ...");
+       setTimeout(()=>{
+        console.log("Data of id number : "+id+" is "+arr[id]);
+        callback();
+       },4000)
+    }
+
+    getdata(0,()=>{
+        getdata(1,()=>{
+            getdata(2,()=>{
+                getdata(3,()=>{
+                    getdata(4,()=>{
+
+                    })
+                })
+            })
+        })
+    })
+
+    */
+
+    /*
+
+let getdata=(id)=>{
+       
+       return new Promise((resolve,reject)=>{
+        console.log("Loading data "+(id+1));
+        setTimeout(()=>{
+        resolve("Promise Resolved")
+       },2000)
+       })
+    }
+
+        
+        getdata(0).then((data)=>{
+            console.log("Data Successfully Fetched : "+arr[0]);
+            return  getdata(1);
+        })
+        .then((data)=>{
+            console.log("Data Successfully Fetched : "+arr[1]);
+            return getdata(2);
+        })
+        .then((data)=>{
+            console.log("Data Successfully Fetched : "+arr[2]);
+            return getdata(3);
+        })
+        .then((data)=>{
+            console.log("Data Successfully Fetched : "+arr[3]);
+            return getdata(4);
+        })
+        .then((data)=>{
+            console.log("Data Successfully Fetched : "+arr[4]);
+        })
+
+        */
+
+
+    let getdata=(id)=>{
+       
+       return new Promise((resolve,reject)=>{
+        console.log("Loading data "+(id+1));
+        setTimeout(()=>{
+        resolve("Success")
+       },2000)
+       })
+    }
+
+    (async function calling(){
+        await getdata(0);
+        console.log("Data Fetched Successfully : "+arr[0]);
+        await getdata(1);
+        console.log("Data Fetched Successfully : "+arr[1]);
+        await getdata(2);
+        console.log("Data Fetched Successfully : "+arr[2]);
+        await getdata(3);
+        console.log("Data Fetched Successfully : "+arr[3]);
+        await getdata(4);
+        console.log("Data Fetched Successfully : "+arr[4]);
+    })();
+</script>
+</html>
+
+

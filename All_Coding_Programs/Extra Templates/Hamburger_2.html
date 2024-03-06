@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color:rgba(0, 0, 0, 0.19);
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu li {
+            margin-right: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: #ffcc00;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            display: none;
+            flex-direction: column;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: rgb(41, 38, 38);
+            margin: 3px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu {
+                transform: translateX(-105%);
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                /* left: 0; */
+                width: 100%;
+                background-color: #333;
+            }
+
+            .menu.show {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuIcon = document.getElementById('menu-icon');
+        const menu = document.getElementById('menu');
+
+        menuIcon.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    });
+
+</script>
+
+</html>

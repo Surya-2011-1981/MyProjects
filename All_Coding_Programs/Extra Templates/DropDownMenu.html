@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DropDownMenu</title>
+    <style>
+        #parent{
+            display: flex;
+            flex-direction:row;
+            gap:2em;
+        }
+        #parent li{
+            list-style-type: none;
+            font-family:elephant;
+            font-weight: 700;
+            border: 2px solid blue;
+            border-radius: 7px;
+            background:linear-gradient(40deg,red,blue);
+            height:30px;
+            width: 100px;
+            color: rgb(185, 185, 176);
+            text-align: center;
+            transition-duration: 1s;
+        }
+        #child1 {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            right: 25px;
+            row-gap: 15px;
+        }
+        #child1 li { 
+            margin-top: 10px;
+            font-family: sans-serif;
+            border: none;
+            height: 35px;
+            text-align: center;
+            width: 100px;
+            padding-top: 8px;
+            box-sizing: border-box;
+            background:linear-gradient(45deg,green,yellow,cyan);
+            /* display: none; */
+            color: rgb(99, 77, 34);
+            
+        }
+
+        #child2{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            right: 25px;
+            row-gap: 15px;
+        }
+        #child2 li { 
+            margin-top: 10px;
+            font-family: sans-serif;
+            border: none;
+            height: 35px;
+            text-align: center;
+            width: 100px;
+            padding-top: 9px;
+            box-sizing: border-box;
+            background:linear-gradient(45deg,green,yellow,cyan);
+            color: rgb(99, 77, 34);
+            /* display: none; */
+        }
+        #child3{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            right: 25px;
+            row-gap: 15px;
+        }
+        #child3 li { 
+            margin-top: 10px;
+            font-family: sans-serif;
+            border: none;
+            height: 35px;
+            text-align: center;
+            width: 100px;
+            padding-top: 9px;
+            box-sizing: border-box;
+            background:linear-gradient(45deg,green,yellow,cyan);
+            color: rgb(99, 77, 34);
+            /* display: none; */
+        }
+        #child1:first-child{
+            margin-top: 10px;
+        }
+        #child2:nth-child(1){
+            margin-top: 10px;
+        }
+        #child3:nth-child(1){
+            margin-top: 10px;
+        }
+        .class:hover{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul id="parent">
+        <li class="one">Option 1
+            <ul id="child1">
+                <li>SubGroup1</li>
+                <li>SubGroup2</li>
+                <li>SubGroup3</li>
+            </ul>
+        </li>
+        <li class="two">Option 2
+            <ul id="child2">
+                <li>SubGroup1</li>
+                <li>SubGroup2</li>
+                <li>SubGroup3</li>
+            </ul>
+        </li>
+        <li class="three">Option 3
+            <ul id="child3">
+                <li>SubGroup1</li>
+                <li>SubGroup2</li>
+                <li>SubGroup3</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

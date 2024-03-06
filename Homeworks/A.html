@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Value Example</title>
+</head>
+<body>
+<form>
+    <input type="text" id="myInput" />
+    <input type="submit" value="Submit" onclick="getValue(this)">
+</form>
+
+  <script>
+    function getValue(e) {
+      var inputElement = document.getElementById("myInput");
+      var inputValue = inputElement.value;
+      console.log("Input value is: " + e.inputValue);
+    }
+  </script>
+
+</body>
+</html>

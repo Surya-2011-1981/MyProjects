@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration form </title>
+	<link rel="stylesheet" type="text/css" href="style_form.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+	</script>
+</head>
+<body>
+	<marquee>NOTE : Once the form is submitted, the information can't be changed</marquee>
+	<h1 align="center">User Registration  </h1>
+	<form>
+			 
+			
+			<label> Name : </label><sup>*</sup>
+			<input type="text" name="name" placeholder="Enter your Name " class="info" id="name"><br><br>
+			<label>Address : </label> <br>
+			<textarea name="address" class="address"></textarea><br><br>
+			<label >State : </label>
+			<select class="state">
+					<option value="Jharkhand">Jharkhand</option>
+					<option value="Bihar">Bihar</option>
+					<option value="Uttar Pradesh">Uttar Pradesh</option>
+					<option value="West Bangal">West Bangal</option>
+					<option value="Odisha">Odisha</option>
+					<option value="Tamilnaadu">Tamilnaadu</option>
+					<option value="Delhi">Delhi</option>
+					<option value="Maharashtra">Maharashtra</option>
+			</select><br><br>
+			<label >Country : </label>
+			<input type="text" name="country" placeholder="BHARAT" readonly  class="country" style="color:black;"><br><br>
+			<label>Gender : </label>
+			 Male<input type="radio" name="gender" value="male" class="gender">
+			 Female<input type="radio" name="gender" value="female" class="gender"><br><br>
+			<label>Department : </label>
+			<input type="text" readonly placeholder="BCA" class="info" style="width:50px;"><br><br>
+			<label >Select Semester : </label>
+				<select class="info" style="width:140px">
+					<option value="Semester 1 ">Semester 1</option>
+					<option value="Semester 2">Semester 2</option>
+					<option value="Semester 3">Semester 3</option>
+					<option value="Semester 4">Semester 4</option>
+					<option value="Semester 5">Semester 5</option>
+					<option value="Semester 6">Semester 6</option>
+				</select><br><br>
+				<label>Contact No. :</label><sup>*</sup>
+				<input type="text" name="Country_Code" placeholder="+91" style="height:30px;" readonly size="1px">&nbsp<input type="number" class="info" name="Phone_Number" max="9999999999" required><br><br>
+				<label>Email : </label><sup>*</sup>
+				<input type="Email" name="Email" placeholder="xyz@gmail.com" required class="info"><br><br>
+				<label>Create a user name : </label><sup>*</sup>
+				<input type="text" name="username" placeholder="xyz" required class="info"><br><br>
+				<label>Create Password: </label><sup>*</sup>
+				<input type="Password" name="Password" required class="info"><br><br>
+				<label>Confirm Password: </label><sup>*</sup>
+				<input type="Password" name="Password" required class="info"><br><br>
+        <label>Upload photo : </label><sup>*</sup>
+        <input type="file" name="photo"><br><br>
+				<p id="buttons">
+				<input type="reset" class="button" > &nbsp &nbsp <input type="submit" class="button" >
+			</p>
+	</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+
+<script>
+	var div1=document.createElement("div");
+    var div2=document.createElement("div");
+    var div3=document.createElement("div");
+	div1.setAttribute("class","main1");
+	div2.setAttribute("class","main2");
+	div3.setAttribute("class","main3");
+	document.querySelector("body").append(div1);
+	document.querySelector("body").append(div2);
+	document.querySelector("body").append(div3);
+    var arr=document.querySelectorAll("div");
+    document.querySelector("body").style.display="flex";
+    document.querySelector("body").style.gap="20px";
+    arr.forEach(a=>{
+        a.style.height="200px";
+        a.style.width="200px";
+        a.style.backgroundColor="cyan";
+        a.style.border="2px solid red";
+    })
+
+
+</script>
+</html>

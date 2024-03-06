@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: mistyrose;
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+}
+
+.logo img {
+    height: 2rem;
+    width: 7rem;
+}
+
+li img {
+    height: 1rem;
+    width: 1rem;
+}
+
+ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    gap: 2em;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+ul li a:hover {
+    font-weight: bold;
+}
+
+.content {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 3em;
+    top: 5em;
+}
+
+.review-text {
+    height: 33%;
+    font-size: 2em;
+    font-family: arial;
+}
+
+.para {
+    height: 34%;
+    font-size: 1.2em;
+}
+
+.download_for_linux_mac {
+    height: 33%;
+}
+
+.review-text img {
+    height: 0.6em;
+    position: relative;
+    top: 3px;
+    width: 2em;
+}
+
+.para p {
+    font-size: 1.2em;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    font-family: arial;
+}
+
+.download_for_linux_mac a {
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: cyan;
+    font-weight: bold;
+    color: black;
+    font-family: arial;
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    width: 17rem;
+    height: 3em;
+}
+
+.download_for_linux_mac a:hover {
+    background-color: rgb(7, 232, 232);
+}
+
+.version {
+    display: flex;
+}
+
+.version img {
+    height: 55px;
+    display: inline;
+    width: 50px;
+    position: relative;
+    left: -16em;
+    border-radius: 5px;
+}
+
+.version p {
+    position: relative;
+    left: -7.5em;
+    font-family: sans-serif;
+    font-size: 1.9em;
+    top: -0.8em;
+}
+
+.version p span {
+    font-size: 0.5em;
+}
+
+.version p span a {
+    text-decoration: none;
+    color: black;
+}
+
+.main_content {
+    position: relative;
+    top: 5em;
+    gap: 5em;
+    left: 1em;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 20em 20em 20em;
+
+}
+#box {
+    background-color: burlywood;
+    border-radius: 5px;
+    height: 10em;
+}
+.main_content #box {
+    display: grid;
+    grid-template-areas: "language language"
+        "country country"
+        "download32 download64";
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_content #box b {
+    grid-area: language;
+    /* border: 1px solid red; */
+    position: relative;
+    top: 1em;
+    text-align: center;
+    font-size: 1.5em;
+    height: 2em;
+
+}
+
+.main_content #box i {
+    grid-area: country;
+    /* border: 1px solid red; */
+    text-align: center;
+    position: relative;
+    bottom: 1em;
+}
+
+.main_content #box .down32 {
+    grid-area: download32;
+    border: 2px solid black;
+    background-color: cyan;
+    text-align: center;
+    height: 2em;
+    width: 8em;
+    font-weight: 700;
+    padding-top: 6px;
+    border-radius: 5px;
+    position: relative;
+    bottom: 20px;
+    color: black;
+}
+
+.main_content #box .down64 {
+    text-align: center;
+    grid-area: download64;
+    border: 2px solid black;
+    background-color: rgb(3, 254, 36);
+    height: 2em;
+    width: 8em;
+    font-weight: 700;
+    color: black;
+    padding-top: 6px;
+    border-radius: 5px;
+    position: relative;
+    bottom: 20px;
+}
+
+.main_content #box a {
+    text-decoration: none;
+}
+
+.main_content #box .down32:hover {
+    background-color: rgb(93, 142, 142);
+    color: white;
+}
+
+.main_content #box .down64:hover {
+    background-color: rgb(71, 112, 77);
+    color: white;
+}
+
+@media only screen and (max-width:1090px) {
+    .main_content {
+        grid-template-columns: 20em;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Password Validation in javascript : At least 8 characters and 1 Uppercase and 1 lowercase and 1 digit and one special Symbol
+    // console.log(a.charCodeAt(0));
+
+    let password = prompt("Enter your Password ", "");
+    // alert(password.length)
+
+    if(password.length>=8)
+    {
+        for (const A of password)
+        {
+            if(A.charCodeAt(0)>=65 && A.charCodeAt(0)<=90)
+            {
+                for (const a of password) 
+                {
+                    if(a.charCodeAt(0)>=97 && a.charCodeAt(0)<=122)  
+                    {
+                        for (const num of password)
+                        {
+                            if(num.charCodeAt(0)>=48 && num.charCodeAt(0)<=57)
+                            {
+                                for (const special of password)
+                                {
+                                    if((special.charCodeAt(0)>=33 && special.charCodeAt(0)<=47) || (special.charCodeAt(0)>=58 && special.charCodeAt(0)<=64) || special.charCodeAt(0)==95)
+                                    {
+                                        alert("Your Password matches all the constraints...");
+                                        break;
+                                        }  
+                                }
+                            }
+                            break;   
+                        }
+                        break;
+                    }  
+                }
+                break;
+            }            
+        }
+    }
+    else
+    {
+        alert("Your Password has less than 8 characters...")
+    }
+</script>
+
+</html>

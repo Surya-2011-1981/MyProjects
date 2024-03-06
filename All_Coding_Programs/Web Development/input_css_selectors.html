@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+<style>
+    #name::placeholder{
+        color: blue;
+        border: 3px solid red ;
+        width: 160px;
+    }
+    #bca:read-only{
+        font-weight:bold;
+        color: blue;
+        width: 50px;
+        background-color: cyan;
+    }
+    #roll:required{
+        color: red;
+    }
+    #grade:focus{
+        background-color: aquamarine;
+    }
+</style>
+</head>
+<body>
+        Name : <input type="text" placeholder="Enter Your Name" id="name"><br>
+        <br>
+        Roll : <input type="number" id="roll" required placeholder="Must fill this Section">
+        <br><br>
+        Department : <input type="text" value="BCA" readonly id="bca"><br><br>
+        Grade : <input type="text" id="grade" autofocus><br><br>
+
+        <input type="text"><br>
+        <input type="text"><br>
+        <input type="text"><br>
+        <input type="text"><br>
+        <input type="text"><br>
+        <input type="text"><br>
+</body>
+</html>

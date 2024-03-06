@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            height: 80vh;
+            width: 70vw;
+            display: grid;
+            border: 2px solid black;
+            /* grid-template-columns: 100PX 150PX 50PX;  we can set column names also like */
+            grid-template-columns: [first] 100px [second] 150px [third] 200px ;
+            /* grid-template-rows: 50px 70px 30px; we can also set rows name */
+            grid-template-rows: [one] 50px [two] 80px [three]100px;
+            row-gap: 10px;
+            place-content: center;
+        }
+
+        body div {
+            border: 1px solid red;
+            /* height:50px;
+            width: 50px; */
+        }
+
+        .box1 {
+            width: none;
+            /* grid-column: 1/3;
+            grid-row: 1/3;  or we can do */
+            grid-column: second/third;/*Work Same as grid-column:1/3;*/
+            grid-row: one/three;/*Work Same as grid-row:1/3;*/
+            background-color: cyan;
+        }
+
+        /* .box5 {
+            width: none;
+            grid-column: 1/3;
+            grid-row: 1/3;
+            background-color: blue;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div class="box1">
+
+    </div>
+    <div class="box2">
+
+    </div>
+    <div class="box3">
+
+    </div>
+    <div class="box4">
+
+    </div>
+    <div class="box5">
+
+    </div>
+</body>
+
+</html>

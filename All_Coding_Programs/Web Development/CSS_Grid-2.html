@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            height: 80vh;
+            width: 70vw;
+            display: grid;
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "head head head "
+                                 "nav nav nav    "
+                                 "content content side"
+                                 "footer footer footer";
+        }
+        .box1{
+            grid-area:nav;
+            background-color:aquamarine;
+        }
+
+        .box2{
+            grid-area:content;
+            background-color:rgb(172, 235, 135);
+        }
+        .box3{
+            grid-area:side;
+            background-color:rgb(107, 132, 189);
+        }
+        .box4{
+            grid-area:footer;
+            background-color:lightcoral;
+        }
+        .box5{
+            grid-area:head;
+            background-color:lightslategray;
+        }
+        body div{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+            place-items: center;
+            color: blue;
+        }
+      
+    </style>
+
+</head>
+
+<body>
+    <div class="box1">
+        I am box1   
+    </div>
+    <div class="box2">
+            I am box2
+    </div>
+    <div class="box3">
+            I am box3
+    </div>
+    <div class="box4">
+            I am box4
+    </div>
+    <div class="box5">
+            I am box5
+    </div>
+</body>
+
+</html>
