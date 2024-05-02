@@ -1,0 +1,5 @@
+2024-05-02 07:17:08,013 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-05-02 07:19:24,350 [Worker-5: http://downloads.sourceforge.net/project/sapnweclipse/updates/features/com.sap.netweaver.porta.ide.eclipse.feature_0.7.2.201006211643.jar] INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (java.net.SocketException) caught when processing request to {}->http://downloads.sourceforge.net:80
+2024-05-02 07:26:31,809 [Worker-5: https://download.eclipse.org/jetty/updates/jetty-wtp/1.0.0.201012221052/content.jar] INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (java.net.SocketException) caught when processing request to {s}->https://download.eclipse.org:443
+2024-05-02 07:36:52,702 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-05-02 07:42:06,800 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
