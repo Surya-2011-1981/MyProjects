@@ -1,3 +1,0 @@
-INDEX VERSION 1.4+C:\Users\surya\OneDrive\Desktop\Study\Github\MyProjects\JDBC\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3454162281.index
-1824751176.index
