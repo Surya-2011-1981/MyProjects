@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+    }
+    .color-random {
+      background-color: aqua;
+    }
+    img {
+      height: 200px;
+      width: 300px;
+      cursor: pointer;
+      display: none;
+    }
+    @media only screen and (max-width: 900px) {
+      img {
+        display: inline-block;
+      }
+    }
+  </style>
+  <body>
+    <img src="icon-2.png" alt="" class="image" />
+  </body>
+  <script>
+    let icon = document.querySelector(".image");
+    icon.onclick = () => {
+      document.body.classList.toggle("color-random");
+    };
+  </script>
+</html>

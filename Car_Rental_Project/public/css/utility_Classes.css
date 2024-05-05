@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tac+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  /* font-weight: 700; */
+  font-style: normal;
+  transition-duration: 0.5s;
+  text-wrap: wrap;
+}
+
+
+/* Colours */
+
+:root {
+  --Color_1: rgba(158, 158, 159, 0.478);
+  --Color_2: rgb(0, 149, 255);
+}
+
+
+/* 
+**************  Display Classes *******************
+*/
+.display-none {
+  display: none;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-block {
+  display: block;
+}
+
+/* **************  Display Flex Classes  ************** */
+.display-flex {
+  display: flex;
+}
+
+
+/* **************  Flex Direction  ************** */
+
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+/* ************** Justify Content Classes  ************** */
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-left {
+  justify-content: left;
+}
+
+.justify-content-right {
+  justify-content: right;
+}
+
+.justify-content-baseline {
+  justify-content: baseline;
+}
+
+.justify-content-flex-start {
+  justify-content: flex-start;
+}
+
+.justify-content-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+
+
+/* ***********  Align Items Classes *********************/
+
+.align-item-center {
+  align-items: center;
+}
+
+.align-item-flex-start {
+  align-items: flex-start;
+}
+
+.align-item-flex-end {
+  align-items: flex-end;
+}
+
+
+/* *********** Position Classes *********************/
+
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+
+/* ***********  Border and Border Radius *********************/
+.border-2px {
+  border: 2px solid black;
+}
+
+.border-radius {
+  border-radius: 7px;
+}
+
+/************  Anchor Tag *********************/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/************  List Items *********************/
+
+li {
+  list-style-type: none;
+  color: black;
+}
+
+.margin-left {
+  margin-left: 10px;
+}

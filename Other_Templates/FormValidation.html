@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="Updated_Form.css" />
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Sign up Form</legend>
+
+        <div class="For-Profile display-none"></div>
+
+        <label for="First-Name">First Name<sup>*</sup> : </label><br />
+        <input
+          type="text"
+          placeholder="Enter Your First Name"
+          id="First-Name"
+          name="First-Name"
+          required="required"
+          value=""
+        /><br /><br />
+        <small id="First-Name-Small"></small>
+        <br />
+        <label for="Last-Name">Last Name<sup>*</sup> : </label><br />
+        <input
+          type="text"
+          placeholder="Enter your last name "
+          id="Last-Name"
+          name="Last-Name"
+          required="required"
+          value=""
+        /><br /><br />
+        <small id="Last-Name-Small"></small><br />
+        <label for="Contact-Number">Contact Number : </label><br />
+        <input
+          type="number"
+          placeholder="Enter your 10 digit mobile number"
+          id="Contact-Number"
+          name="Contact-Number"
+          value=""
+        /><br /><br />
+        <small id="Mobile-Number-Small"></small><br />
+        <label for="Email-Id">Email<sup>*</sup> : </label><br />
+        <input
+          type="email"
+          placeholder="Enter your email"
+          id="Email-Id"
+          name="Email-Id"
+          required="required"
+          value=""
+        /><br /><br />
+        <small id="Email-Small"></small><br />
+        <label for="Create-Password">Create Password<sup>*</sup> :</label>
+        <img
+          src="Hide_Pass.png"
+          alt="Show Password"
+          class="Hide-Password Password-Visiblity"
+          title="Password Hidden"
+          id="Hide-Password"
+        />
+        <br />
+
+        <input
+          type="password"
+          name="Create-Password"
+          required="required"
+          id="Create-Password"
+          value=""
+        />
+        <br /><br />
+        <small class="small">Password Must Contain at least 8 characters</small
+        ><br />
+        <label style="position: relative; top: -15px" for="Confirm-Password"
+          >Confirm Password<sup>*</sup> : </label
+        ><br />
+        <input
+          type="Password"
+          name="Confirm-Password"
+          required="required"
+          id="Confirm-Password"
+          value=""
+        /><br /><br />
+        <small
+          id="Confirm-Password-Small"
+          style="position: relative; top: -35px"
+          ;
+        ></small
+        ><br />
+        <label for="Photo" style="position: relative; top: -30px" ;
+          >Upload Photo : </label
+        ><br />
+        <input
+          type="file"
+          id="Photo"
+          name="Photo"
+          required="required"
+        /><br /><br />
+        <small id="Photo-Small" style="position: relative; top: -50px" ;></small
+        ><br />
+        <input type="submit" id="Submit-Form" /> &nbsp &nbsp
+        <input type="reset" id="Reset-Form" /><br /><br />
+      </fieldset>
+    </form>
+  </body>
+  <script src="Updated_Form.js"></script>
+</html>

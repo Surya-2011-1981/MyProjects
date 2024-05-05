@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  display: none;
+}
+
+input,
+select {
+  /* outline: none; */
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+label {
+  font-family: sans-serif;
+}
+
+input:focus {}
+
+.main {
+  height: 25vh;
+  border-radius: 6px;
+  width: 25vw;
+  margin: auto;
+  background-color: rgba(90, 89, 88, 0.579);
+}
+
+.main form {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  gap: 2em;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.7em;
+}
+
+.main form p:nth-child(1) {
+  display: flex;
+  gap: 1em;
+}
+
+.reset-submit {
+  display: flex;
+  gap: 1em;
+}
+
+.reset-submit>* {
+  height: 30px;
+  width: 70px;
+  padding: 4px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.reset-submit>*:hover {
+  background-color: azure;
+  transform: scale(1.2);
+}
+
+select {
+  width: 45px;
+  height: 30px;
+}
+
+option {
+  text-align: center;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  height: 30px;
+  width: 150px;
+  text-align: center;
+}
+
+input::placeholder {
+  font-weight: bold;
+}

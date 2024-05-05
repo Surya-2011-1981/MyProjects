@@ -1,0 +1,142 @@
+* {
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.display-none {
+  display: none;
+}
+
+/* body {
+  
+} */
+
+form {
+  width: 30vw;
+  margin: auto;
+  height: 100vh;
+  position: relative;
+}
+
+.For-Profile {
+  height: 90px;
+  /* border: 1px solid red; */
+  width: 90px;
+  position: absolute;
+  top: 20px;
+  right: 4px;
+  overflow: hidden;
+}
+
+fieldset {
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: rgb(19, 247, 121);
+}
+
+input[type="reset"] {
+  background-color: rgb(255, 176, 115);
+}
+
+img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid whit;
+}
+
+input[type="file"] {
+  padding: 5px;
+  max-height: 25px;
+  max-width: 203px;
+  font-size: 15px;
+  position: relative;
+  top: -30px;
+}
+
+input {
+  display: inline-block;
+  width: 250px;
+  height: 30px;
+  outline: none;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  display: none;
+  border: none;
+}
+
+.Error-Input {
+  border: 1.5px solid red;
+}
+
+input::placeholder {
+  font-size: 12px;
+}
+
+sup {
+  color: red;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: rgba(19, 247, 122, 0.725);
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: 100px;
+  height: 35px;
+  position: relative;
+  left: 200px;
+  top: 20px;
+}
+
+input[type="reset"]:hover {
+
+  background-color: rgba(255, 176, 115, 0.825);
+
+}
+
+small {
+  font-size: 12px;
+  color: rgb(254, 113, 113);
+  position: relative;
+  top: -20px;
+}
+
+b {
+  color: blue;
+  font-size: 12px;
+}
+
+.Password-Visiblity {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  position: relative;
+  transition: all;
+  transition-duration: 0.3s;
+}
+
+.Password-Visiblity:hover {
+  cursor: pointer;
+}
+
+.Hide-Password {
+  top: 30px;
+  left: 7.6em;
+}
+
+#Confirm-Password {
+  position: relative;
+  top: -15px;
+}

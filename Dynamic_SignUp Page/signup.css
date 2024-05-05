@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("background-1.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Geneva, Verdana, sans-serif;
+}
+
+form {
+  height: 70vh;
+  min-width: 25vw;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  border-radius: 7px;
+}
+
+form h1 {
+  color: white;
+}
+
+form>* {
+  height: 10%;
+  /* border: 1px solid black; */
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+form input {
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid black;
+  width: 80%;
+  color: white;
+  height: 70%;
+  border-radius: 3px;
+}
+
+form img {
+  height: 20px;
+  position: relative;
+  left: -1.2rem;
+  width: 20px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.596);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  display: none;
+}
+
+.submit-and-reset {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  border: 1px solid white;
+  width: 30%;
+}
+
+
+/* Error Message */
+
+.error {
+  border-bottom: 2px solid red;
+}

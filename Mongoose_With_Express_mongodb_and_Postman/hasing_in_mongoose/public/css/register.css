@@ -1,0 +1,75 @@
+body {
+  background: cyan;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  min-height: 70vh;
+  min-width: 40vw;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+form>div {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  font-size: 1.3rem;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  display: none;
+}
+
+input {
+  transition-duration: 0.3s;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  background-color: rgb(73, 251, 67);
+  border: 1px solid black;
+  border-radius: 5px;
+  min-height: 30px;
+  min-width: 120px;
+  padding: 4px;
+  cursor: pointer;
+
+}
+
+input[type="reset"] {
+  background-color: rgb(250, 84, 84);
+  border: 1px solid black;
+  border-radius: 5px;
+  min-height: 30px;
+  min-width: 120px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgba(73, 251, 67, 0.503);
+  font-weight: bold;
+  transform: scale(1.2);
+}
+
+input[type="reset"]:hover {
+  background-color: rgba(250, 84, 84, 0.773);
+  font-weight: bold;
+  transform: scale(1.2);
+}

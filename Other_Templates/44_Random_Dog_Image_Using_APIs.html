@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+	<style>
+		body
+	{
+		margin: auto;
+    	display: flex;
+    	justify-content:space-around;
+    	flex-direction: column;
+    	align-items: center;
+    	height: 100vh;
+    	gap: 2em;
+	}
+	img {
+		
+		overflow: hidden;
+		transition-duration: 0.4s;
+		border-radius: 20px;
+	}
+	img:hover{
+		transform: scale(1.3);
+		/*height: 200px;
+		width: 350px;*/
+	}
+	button{
+		height: 40px;
+		width: 200px;
+		background:cyan;
+		border-radius:9px;
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<img  alt="Chess" height="150px" width="250px">
+	<button >Click</button>
+
+</body>
+<script>
+	let url='https://dog.ceo/api/breeds/image/random';
+	async function call(){
+	 let p1=await fetch(url);
+	 let data=await p1.json();
+	 console.log(data.message)
+	 document.querySelector("img").setAttribute("src",data.message);
+	}
+	document.querySelector("button").onclick=call;
+</script>
+</html>

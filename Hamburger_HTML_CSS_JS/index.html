@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .display-none {
+        display: none;
+      }
+      nav {
+        width: 100vw;
+        height: 10vh;
+        border: 1px solid black;
+      }
+      nav img {
+        display: none;
+      }
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        height: 10%;
+        width: 70%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        justify-content: flex-start;
+        align-items: center;
+        transition-duration: 0.5s;
+      }
+      nav ul li {
+        list-style: none;
+        height: 40px;
+        width: 100px;
+        border-radius: 7px;
+      }
+      nav ul li a {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-size: 1.2em;
+        font-family: sans-serif;
+        text-decoration: none;
+        transition-duration: 0.4s;
+        color: black;
+      }
+      nav ul li a:hover {
+        transform: scale(1.2);
+        color: orangered;
+      }
+      @media only screen and (max-width: 900px) {
+        nav img {
+          display: inline-block;
+          height: 40px;
+          width: 48px;
+          padding: 4px;
+          position: absolute;
+          left: 0;
+          cursor: pointer;
+          z-index: 99;
+          border-radius: 3px;
+        }
+        nav {
+          height: 100vh;
+          width: 30vw;
+          border: none;
+          border-radius: 7px;
+        }
+        nav ul {
+          flex-direction: column;
+          position: relative;
+          align-items: center;
+          gap: 4em;
+          transform: translateX(-110%);
+          pointer-events: none;
+          visibility: hidden;
+          opacity: 0;
+          background-color: pink;
+          height: 100%;
+          width: 30%;
+          position: absolute;
+          top: 0px;
+        }
+        nav ul li {
+          position: relative;
+          top: 4em;
+         
+        }
+        .show-menu {
+          transform: translateX(0);
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+        .icons {
+          height: 40px;
+          width: 45px;
+        
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="icons">
+        <img src="icon.png" alt="open menu" title="open menu" class="icon" />
+        <img
+          src="icon-2.png"
+          alt=""
+          title="close-menu"
+          class="display-none close-icon"
+        />
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+    </nav>
+  </body>
+  <script>
+    let icon = document.querySelector(".icons");
+    let list = document.querySelector("ul");
+    let show_menu = document.querySelector(".icon");
+    let hide_menu = document.querySelector(".close-icon");
+    icon.onclick = () => {
+      list.classList.toggle("show-menu");
+      show_menu.classList.toggle("display-none");
+      hide_menu.classList.toggle("display-none");
+    };
+  </script>
+</html>

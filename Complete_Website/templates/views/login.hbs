@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/hover.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    {{!-- {{>navbar}} --}}
+    <form action="/login" method="POST">
+      <h1>LogIn</h1>
+      <p class="email-section">
+        <input
+          type="email"
+          required="required"
+          name="user_mail"
+          value=""
+          placeholder="Email"
+        />
+        <img src="/assets/email.svg" alt="Email icon" />
+      </p>
+      <p class="password-section">
+        <input
+          type="password"
+          required="required"
+          name="user_password"
+          value=""
+          placeholder="Password"
+        />
+        <img src="/assets/eye.svg" alt="Email icon" />
+      </p>
+      <p class="submit-section">
+        <input type="submit" value="LogIn" />
+      </p>
+      <p class="register-section">
+        Don't have an account ? <a href="/signup">Register</a>
+      </p>
+    </form>
+  </body>
+</html>

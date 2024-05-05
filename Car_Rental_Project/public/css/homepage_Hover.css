@@ -1,0 +1,33 @@
+body header .logIn-and-signUp a:hover {
+  transform: scale(1.2);
+}
+
+body header .logIn-and-signUp .signup:hover {
+  background-color: white;
+}
+
+body header .logIn-and-signUp .logIn:hover {
+  background-color: var(--Color_2);
+}
+
+body header nav ul li a:hover {
+  color: var(--Color_2);
+  transform: scale(1.3);
+}
+
+.text-message span a:hover {
+  transform: scale(1.2);
+  font-weight: bold;
+}
+
+body .our-inventory>ul>li div a:hover {
+  transform: scale(1.2);
+  font-weight: bold;
+}
+
+
+body .our-inventory>a:hover {
+  transform: scale(1.2);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.479);
+}

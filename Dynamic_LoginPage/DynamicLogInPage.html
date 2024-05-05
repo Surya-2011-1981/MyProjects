@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      body {
+        background: url("NeonBackground.jpg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        height: 65%;
+        width: 28%;
+        border: 2px solid rgba(157, 160, 160, 0.552);
+        border-radius: 7px;
+        /* background-color: red; */
+        background: transparent;
+        backdrop-filter: blur(5px);
+        display: grid;
+        grid-template-areas:
+          "text text"
+          "Email Email"
+          "pass pass"
+          "Rem  Rem"
+          " login login"
+          "register register";
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      h3 {
+        grid-area: text;
+        font-weight: 700;
+        margin: auto;
+        color: whitesmoke;
+        font-size: 1.4em;
+        font-family: sans-serif;
+      }
+
+      #Email {
+        grid-area: Email;
+        position: relative;
+      }
+
+      #pass {
+        grid-area: pass;
+      }
+
+      #Rem {
+        grid-area: Rem;
+        position: relative;
+        bottom: 20px;
+      }
+
+      #login {
+        grid-area: login;
+        height: 40px;
+        position: relative;
+        bottom: 30px;
+        width: 80%;
+        background-color: white;
+        margin: auto;
+        border-radius: 15px;
+        border: 2px solid gray;
+      }
+
+      #login button {
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        font-size: 18px;
+        font-family: sans-serif;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        color: rgba(0, 0, 0, 0.604);
+        cursor: pointer;
+      }
+
+      #register {
+        grid-area: register;
+        color: rgba(255, 255, 255, 0.499);
+        font-family: sans-serif;
+        font-weight: 500;
+        position: relative;
+        bottom: 50px;
+        left: 75px;
+      }
+
+      #register a {
+        position: relative;
+        left: 10px;
+        text-decoration: none;
+        color: white;
+      }
+
+      input {
+        /* backdrop-filter: ; */
+        background: transparent;
+        margin: auto;
+        height: 40px;
+        width: 350px;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid white;
+        font-family: sans-serif;
+        color: white;
+        position: relative;
+        left: 20px;
+      }
+
+      p img {
+        filter: invert(1);
+        position: relative;
+        right: 5px;
+        font-weight: bold;
+        background: transparent;
+      }
+
+      label {
+        font-size: 1em;
+        color: white;
+        font-family: sans-serif;
+        position: relative;
+        left: 24px;
+      }
+
+      input[type="checkbox"] {
+        height: 15px;
+        width: 20px;
+      }
+
+      #Rem a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        left: 100px;
+      }
+
+      a {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h3>Login</h3>
+      <p id="Email">
+        <input type="email" placeholder="Email" /><img
+          src="email.svg"
+          alt="email"
+          height="20px"
+          width="20px"
+        />
+      </p>
+      <p id="pass">
+        <input type="password" placeholder="Password" />
+        <img src="eye (1).svg" alt="password" height="20px" width="20px" />
+      </p>
+      <p id="Rem">
+        <input type="checkbox" /><label>Remember me </label>
+        <a href="#">Forgot Password ?</a>
+      </p>
+      <p id="login">
+        <button>Login</button>
+      </p>
+      <p id="register">Don't have an account? <a href="#">Register</a></p>
+    </div>
+  </body>
+</html>

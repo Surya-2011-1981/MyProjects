@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<style>
+  .container-fluid{
+  padding:0;
+  margin:0;
+}
+.navbar {
+  margin: 0;
+  border-radius: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, .9);
+}
+.navbar-brand {
+  padding-left: 40px;
+}
+
+.me {
+  border-radius: 50%;
+}
+
+/*sections*/
+#about {
+  padding-top: 13px;
+  color: #fff;
+  background: rgba(43,53,56,1);
+background: -moz-linear-gradient(left, rgba(43,53,56,1) 1%, rgba(43,53,56,1) 45%, rgba(48,60,66,1) 53%, rgba(61,78,92,1) 74%, rgba(77,100,125,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(1%, rgba(43,53,56,1)), color-stop(45%, rgba(43,53,56,1)), color-stop(53%, rgba(48,60,66,1)), color-stop(74%, rgba(61,78,92,1)), color-stop(100%, rgba(77,100,125,1)));
+background: -webkit-linear-gradient(left, rgba(43,53,56,1) 1%, rgba(43,53,56,1) 45%, rgba(48,60,66,1) 53%, rgba(61,78,92,1) 74%, rgba(77,100,125,1) 100%);
+background: -o-linear-gradient(left, rgba(43,53,56,1) 1%, rgba(43,53,56,1) 45%, rgba(48,60,66,1) 53%, rgba(61,78,92,1) 74%, rgba(77,100,125,1) 100%);
+background: -ms-linear-gradient(left, rgba(43,53,56,1) 1%, rgba(43,53,56,1) 45%, rgba(48,60,66,1) 53%, rgba(61,78,92,1) 74%, rgba(77,100,125,1) 100%);
+background: linear-gradient(to right, rgba(43,53,56,1) 1%, rgba(43,53,56,1) 45%, rgba(48,60,66,1) 53%, rgba(61,78,92,1) 74%, rgba(77,100,125,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3538', endColorstr='#4d647d', GradientType=1 )
+}
+
+.social-pane {
+  margin: 40px;
+}
+
+a.facebook {
+  background-color: #3b5999;
+  color: #fff;
+}
+a.quora {
+  color: #fff;
+  background-color: #b92b27;
+}
+a.twitter {
+  color: #fff;
+  background-color: #55acee;
+}
+
+a.youtube {
+  color: white;
+  background-color: #cd201f;
+}
+
+#portfolio {
+  padding: 40px;
+}
+
+.img-responsive {
+  padding-bottom: 40px;
+}
+
+/*footer*/
+.contact-us {
+  padding: 50px;
+    background-color: #ffffff;
+    box-shadow: -2px 40px 34px -24px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: solid 7px #4c9cef;
+    border-left-color: #f7639a;
+    border-right-color: #f7639a;
+}
+
+.contact-us-detail {
+    position: absolute;
+    left: 83%;
+    top: -4%;
+    background-color: #4c9cef;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.contact-us-detail:hover {
+  background-color: #f7639a;
+}
+
+.contact-us-detail a {
+  color: #ffffff;
+}
+
+.contact-us-detail a:hover {
+  color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-control {
+  border: 2px solid transparent;
+  height: 50px;
+  border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+     -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+      -ms-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+     -o-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  -webkit-transition:all 150ms ease-in-out 0s;
+     -moz-transition:all 150ms ease-in-out 0s;
+      -ms-transition:all 150ms ease-in-out 0s;
+       -o-transition:all 150ms ease-in-out 0s;
+        transition:all 150ms ease-in-out 0s;
+}
+.form-control:focus {
+  border-color: #171717;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+      -ms-box-shadow: none;
+     -o-box-shadow: none;
+      box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: #4c9cef;
+  border-width: 2px;
+}
+
+.margin-top-bottom {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.custom-margin {
+    margin-top: 80px;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 17px;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 20px 60px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.button-style {
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+.button-style:hover,
+.button-style:active,
+.button-style:focus {
+  color: #ffffff;
+  background: #4c9cef;
+}
+
+.button-style-color-2:hover,
+.button-style-color-2:active,
+.button-style-color-2:focus {
+  color: #ffffff;
+  background: #f7639a;
+}
+
+.button-style-dark {
+  border: 3px solid #000000;
+  color: #000000;
+}
+
+.pattern-bg {
+  background: url(https://s23.postimg.org/klq72xovv/pattern_bg.png);
+  background-repeat: repeat;
+}
+</style>
+<body>
+  <div class="container-fluid">
+    <!-- Static navbar -->
+        <nav class="navbar navbar-default navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                Fabián Napa 
+              </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#about">About <span class="sr-only">(current)</span></a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!--/.container-fluid -->
+        </nav>
+    
+    <section class="row text-center" id="about">
+        <div class="col-xs-12 col-sm-6">
+          <img     src="https://avatars2.githubusercontent.com/u/13667358?v=3&s=460" class="me" alt="Fabían Napa Photo" />
+      <h1><em><strong>Fabián Napa</strong></em></h1>
+      <div id="typed-strings">
+        <p>I'm a <strong>Developer</strong>.</p>
+        <p>I'm a <strong>Programmer</strong>.</p>
+        <p>I'm a <strong>Designer</strong>.</p>
+      </div>  
+    <span id="typed"></span>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="list-group social-pane">
+            <a href="#" 
+               class="list-group-item facebook">
+               <i class="fa fa-facebook"></i>
+               <p class="list-group-item-text">
+                Facebook  
+              </p>
+           </a>
+            <a href="#" 
+               class="list-group-item twitter">
+               <i class="fa fa-twitter"></i>
+               <p class="list-group-item-text">
+                Twitter
+              </p>
+           </a>
+            <a href="#" 
+               class="list-group-item quora">
+               <i class="fa fa-quora"></i>
+               <p class="list-group-item-text">
+                Quora
+              </p>
+           </a>
+            <a href="https://github.com/FabianNCDev" target="_blank" 
+               class="list-group-item github">
+               <i class="fa fa-github"></i>
+               <p class="list-group-item-text">
+                Github  
+              </p>
+           </a>
+            <a href="https://www.youtube.com/channel/UCX9NJ471o7Wie1DQe94RVIg" target="_blank"
+               class="list-group-item youtube">
+               <i class="fa fa-youtube"></i>
+               <p class="list-group-item-text">
+                Youtube  
+              </p>
+           </a>
+        </div>
+    </section>
+      
+    <section class="row text-center" id="portfolio">
+       <h3 class="text-uppercase">Portfolio</h3>
+       <hr />
+        <div class="col-xs-12 col-sm-6">
+          <img class="img-responsive" src="https://github.com/FabianNCDev/blog-particles_webdesign/raw/master/screenshot.png" alt="A blog with particle.js" />  
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <img class="img-responsive" src="https://github.com/FabianNCDev/chat_react_tutorial/raw/master/react_chat.png" alt="a chat app with react.js" />
+        </div>
+    </section>
+    
+      <section class="row margin-top-bottom">
+             
+               <div class="col-md-offset-3 col-sm-offset-2 col-md-6 col-sm-8">   
+                   
+                 <div class="row" id="contact">
+                   <div class="contact-us-detail"><a href="http://www.faztweb.com" target="_blank">www.faztweb.com</a></div>
+                    <form class="contact-us pattern-bg">
+                      
+              <div class="col-sm-6">
+              <div class="form-group">
+                <input type="text" id="name" class="form-control" placeholder="Your Name">
+               </div>
+                          </div>
+                  
+                         <div class="col-sm-6">
+                <div class="form-group">
+               <input type="email" id="email" class="form-control" placeholder="Your Email">
+               </div>
+                          </div>
+                          
+                          <div class="col-sm-6">
+                <div class="form-group">
+                <input type="text" id="website" class="form-control" placeholder="Your Website">
+                 </div>
+                            </div>
+                            
+                          <div class="col-sm-6">
+                <div class="form-group">
+                <input type="text" id="address" class="form-control" placeholder="Where are You From?">
+                 </div>
+                            </div>
+                  
+                           <div class="col-sm-12">
+                <select id="subject" class="form-group form-control">
+                <option value="" selected disabled>Subject</option>
+                <option>Website Design & Development</option>
+                <option>Wordpress Development</option>
+                <option>Search Engine Optimization</option>
+                              <option>Mobile Website</option>
+                <option>I Want to General Talk</option>
+                              <option>Other</option>
+                 </select>
+                            </div>
+                  
+                         <div class="col-sm-12">
+                <div class="textarea-message form-group">
+                  <textarea id="message" class="textarea-message form-control" placeholder="Your Message" rows="5"></textarea>
+                </div>
+                           </div>
+                     
+                     
+                      <div class="text-center">      
+                     <button type="submit" class="button button-style button-style-dark button-style-color-2">Submit</button>
+                      </div>
+                         
+                    </form>
+                     
+                  </div>
+          </section>
+  </div>  
+</body>
+</html>
