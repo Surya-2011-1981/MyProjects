@@ -6,6 +6,7 @@ const path = require("path");
 const hbs = require("hbs");
 const jwt = require("jsonwebtoken");
 const bcrypt = require('bcryptjs');
+const auth = require('./middleware/auth')
 require("./db/connection");
 const UserCollection = require("./models/userModels")
 const view_Path = path.join(__dirname, "../templates/views");
@@ -19,10 +20,10 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.set('views', view_Path);
 app.set("view engine", "hbs");
 hbs.registerPartials(partial_Path);
-app.get('/index', auth, (req, res) => {
+app.get('/index', (req, res) => {
   res.render('index');
 })
-app.get('/login', auth, (req, res) => {
+app.get('/login', (req, res) => {
   res.render('login');
 })
 
@@ -51,8 +52,8 @@ app.post('/login', async (req, res) => {
     res.cookie("jwt", token, {
       expires: new Date(Date.now() + 500000), // Expires in 500second
       httpOnly: true, // Cookie cannot be accessed by client-side JavaScript
-      secure: true, // Cookie will only be sent over HTTPS
-      sameSite: 'strict'
+      // secure: true, // Cookie will only be sent over HTTPS
+      // sameSite: 'strict'
     })
     // console.log("assigned");
     if (isMatch) {
@@ -66,7 +67,7 @@ app.post('/login', async (req, res) => {
     res.send("user not found");
   }
 })
-app.get('/signup', auth, (req, res) => {
+app.get('/signup', (req, res) => {
   res.render('signup');
 })
 
