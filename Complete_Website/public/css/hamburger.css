@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  flex-direction: column;
+  gap: 5rem;
+}
+
 .display-none {
   display: none;
 }
@@ -11,7 +16,7 @@
 nav {
   width: 100vw;
   height: 10vh;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 nav img {
@@ -22,14 +27,15 @@ nav ul {
   display: flex;
   flex-direction: row;
   gap: 3rem;
-  height: 10%;
-  width: 70%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  justify-content: flex-start;
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  justify-content: center;
   align-items: center;
   transition-duration: 0.5s;
+  z-index: 998;
+  background-color: whitesmoke;
 }
 
 nav ul li {
@@ -75,7 +81,7 @@ nav ul li a:hover {
     position: absolute;
     left: 0;
     cursor: pointer;
-    z-index: 99;
+    z-index: 999;
     border-radius: 3px;
   }
 
@@ -89,13 +95,17 @@ nav ul li a:hover {
   nav ul {
     flex-direction: column;
     position: relative;
+    top: 0;
+    left: 0;
+    position: absolute;
     align-items: center;
-    gap: 4em;
+    justify-content: flex-start;
+    gap: 2.3em;
     transform: translateX(-110%);
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
-    background-color: pink;
+    background-color: rgba(255, 192, 203, 0.927);
     height: 100%;
     width: 30%;
     position: absolute;
@@ -118,6 +128,6 @@ nav ul li a:hover {
   .icons {
     height: 40px;
     width: 45px;
-
+    z-index: 999;
   }
 }

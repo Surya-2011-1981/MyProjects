@@ -37,20 +37,20 @@ app.post('/login', async (req, res) => {
     const Email = req.body.user_mail;
     const password = req.body.user_password;
     const isUser = await UserCollection.findOne({ email: Email });
-    // console.log(isUser);
+    console.log(isUser);
     // console.log(`Acutal Password hashed  value : ${isUser.password}`);
 
     // console.log(isUser.password);
     const isMatch = await bcrypt.compare(password, isUser.password);
-    // console.log(isMatch);
+    console.log(isMatch);
 
     const token = await isUser.generateAuthToken();
     // console.log("token is : ", token);
-    console.log(token, " at login time");
+    // console.log(token, " at login time");
     // Cookies
     // console.log("token from browser cookie ", req.cookies.jwt);
     res.cookie("jwt", token, {
-      expires: new Date(Date.now() + 500000), // Expires in 500second
+      expires: new Date(Date.now() + 14000), // Expires in 14 second
       httpOnly: true, // Cookie cannot be accessed by client-side JavaScript
       // secure: true, // Cookie will only be sent over HTTPS
       // sameSite: 'strict'
@@ -61,6 +61,7 @@ app.post('/login', async (req, res) => {
     }
     else {
       res.status(401).render("incorrect_Password");
+      // console.log(error);
     }
   } catch (error) {
     console.log(error);
@@ -84,7 +85,7 @@ app.post('/signup', async (req, res) => {
       })
 
 
-      // const token = await userDocument.generateAuthToken();
+      const token = await userDocument.generateAuthToken();
       // console.log("token is : ", token);
 
       // Cookies
@@ -110,8 +111,17 @@ app.post('/signup', async (req, res) => {
     }
   } catch (error) {
     res.status(400).send(error);
+    console.log(error);
   }
 })
+
+app.get("/logout", auth, async (req, res) => {
+  res.clearCookie("jwt");
+  await req.user.save();
+  console.log("Logged out");
+  res.render("login");
+})
+
 
 app.listen(8000, () => {
   console.log("Listening at port ", 8000);
