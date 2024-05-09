@@ -11,8 +11,6 @@ require("./db/connection");
 const UserCollection = require("./models/userModels")
 const view_Path = path.join(__dirname, "../templates/views");
 const partial_Path = path.join(__dirname, "../templates/partials");
-
-
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
