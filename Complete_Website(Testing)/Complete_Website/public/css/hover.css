@@ -1,0 +1,11 @@
+input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.718);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.register-section a:hover {
+  color: orangered;
+  transform: scale(1.2);
+  /* font-size: 1.1rem; */
+}

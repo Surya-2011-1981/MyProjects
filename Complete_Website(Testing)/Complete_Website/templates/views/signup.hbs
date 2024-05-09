@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SignUp</title>
+  <link rel="stylesheet" href="/css/signup.css" />
+  {{!--
+  <link rel="stylesheet" href="/css/hover.css"> --}}
+</head>
+
+<body>
+  {{>navbar}}
+  <form action="/signup" method="POST">
+    <h1>SignUp</h1>
+    <div class="full-name">
+      <input type="text" required="required" placeholder="Enter Full Name " autocomplete="off" maxlength="30"
+        name="name" class="name-input" value="" />
+      <img src="/assets/user.svg" alt="Name" title="User" />
+    </div>
+    <div class="contact-number">
+      <input type="number" maxlength="10" placeholder="Enter Phone Number" required="required" name="contact" value=""
+        class="contact" />
+      <img src="/assets/contact.svg" alt="CContact" title="Phone" />
+    </div>
+    <div class="email-section">
+      <input type="email" placeholder="Enter Your Email" required="required" name="email" value="" class="email"
+        autocomplete="off" />
+      <img src="/assets/email.svg" alt="Email" title="Email" />
+    </div>
+    <div class="create-password-section">
+      <input type="password" required="required" name="password" class="c-Password password" minlength="8" value=""
+        placeholder="Create Password" />
+      <img src="/assets/showpassword.svg" alt="password" title="Show Password" class="c-password-img" />
+    </div>
+    <div class="confirm-password-section">
+      <input type="password" required="required" class="cf-Password password" value="" name="cf_password"
+        placeholder="Confirm Password" />
+      <img src="/assets/showpassword.svg" alt="password" title="Show Password" class="cf-password-img" />
+    </div>
+    <div class="submit-and-reset">
+      <input type="submit" class="submit-btn" /><input type="reset" class="reset-btn" />
+    </div>
+    <div class="login">
+      Already have an account ? <a href="/login">&nbsp;LogIn</a>
+    </div>
+  </form>
+</body>
+<script src="/js/validation.js"></script>
+
+</html>

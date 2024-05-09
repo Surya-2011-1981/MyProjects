@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/hamburger.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="icons">
+      <img src="/assets/icon.png" alt="open menu" title="open menu" class="icon" />
+      <img src="/assets/icon-2.png" alt="" title="close-menu" class="display-none close-icon" />
+    </div>
+    <ul>
+      <li><a href="/index" class="btn-style">Home</a></li>
+      <li><a href="/signup" class="btn-style">SignUp</a></li>
+      <li><a href="/login" class="btn-style">Login</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="/gallery" class="btn-style">Gallery</a></li>
+      <li><a href="/logout" class="btn-style">Logout</a></li>
+    </ul>
+  </nav>
+</body>
+<script>
+  let icon = document.querySelector(".icons");
+  let list = document.querySelector("ul");
+  let show_menu = document.querySelector(".icon");
+  let hide_menu = document.querySelector(".close-icon");
+  icon.onclick = () => {
+    list.classList.toggle("show-menu");
+    show_menu.classList.toggle("display-none");
+    hide_menu.classList.toggle("display-none");
+  };
+</script>
+
+</html>
