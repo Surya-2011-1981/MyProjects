@@ -59,7 +59,6 @@ app.post('/login', async (req, res) => {
     }
     else {
       res.status(401).render("incorrect_Password");
-      // console.log(error);
     }
   } catch (error) {
     console.log(error);
