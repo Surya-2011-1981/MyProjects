@@ -81,7 +81,6 @@ app.post('/signup', async (req, res) => {
         password: req.body.password
       })
 
-
       const token = await userDocument.generateAuthToken();
       // console.log("token is : ", token);
 
