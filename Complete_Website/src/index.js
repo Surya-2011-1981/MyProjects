@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require('bcryptjs');
 const auth = require('./middleware/auth')
 require("./db/connection");
-const UserCollection = require("./models/userModels")
+const UserCollection = require("./models/userModels");
 const view_Path = path.join(__dirname, "../templates/views");
 const partial_Path = path.join(__dirname, "../templates/partials");
 app.use(cookieParser());
