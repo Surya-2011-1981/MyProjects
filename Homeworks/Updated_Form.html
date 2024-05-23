@@ -1,137 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Document</title>
-    <link rel="stylesheet" href="Updated_Form.css" />
-  </head>
-  <body>
-    <form action="">
-      <fieldset>
-        <legend>Sign up Form</legend>
 
-        <div class="For-Profile display-none">
-          <img
-            src="Boy_Pic.png"
-            alt=""
-            style="height: 100%; width: 100%"
-            class="profile_image"
-          />
-        </div>
-        <div>
-          <label for="First-Name">First Name<sup>*</sup> : </label><br />
-          <input
-            type="text"
-            autofocus="autofocus"
-            placeholder="Enter Your First Name"
-            id="First-Name"
-            name="First-Name"
-            required="required"
-            value=""
-          /><br /><br />
-          <small id="First-Name-Small"></small>
-          <br />
-        </div>
-        <div>
-          <label for="Last-Name">Last Name<sup>*</sup> : </label><br />
-          <input
-            type="text"
-            placeholder="Enter your last name "
-            id="Last-Name"
-            name="Last-Name"
-            required="required"
-            value=""
-          /><br /><br />
-          <small id="Last-Name-Small"></small><br />
-        </div>
-        <div>
-          <label for="Contact-Number">Contact Number<sup>*</sup> : </label
-          ><br />
-          <input
-            type="number"
-            placeholder="Enter your 10 digit mobile number"
-            id="Contact-Number"
-            name="Contact-Number"
-            value=""
-          /><br /><br />
-          <small id="Mobile-Number-Small"></small><br />
-        </div>
-        <div>
-          <label for="Email-Id">Email<sup>*</sup> : </label><br />
-          <input
-            type="email"
-            placeholder="Enter your email"
-            id="Email-Id"
-            name="Email-Id"
-            required="required"
-            value=""
-          /><br /><br />
-          <small id="Email-Small"></small><br />
-        </div>
-        <div class="C-P">
-          <label for="Create-Password">Create Password<sup>*</sup> :</label>
-          <img
-            src="Hide_Pass.png"
-            alt="Show Password"
-            class="Hide-Password Password-Visiblity"
-            title="Password Hidden"
-            id="Hide-Password"
-          />
-          <br />
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="Updated_Form.css" />
+</head>
 
-          <input
-            type="password"
-            name="Create-Password"
-            required="required"
-            id="Create-Password"
-            value=""
-          />
-          <br /><br />
-          <small class="small"
-            >Password Must Contain at least 8 characters</small
-          ><br />
-        </div>
-        <div class="C-F-P">
-          <label style="position: relative; top: -15px" for="Confirm-Password"
-            >Confirm Password<sup>*</sup> : </label
-          ><br />
-          <input
-            type="Password"
-            name="Confirm-Password"
-            required="required"
-            id="Confirm-Password"
-            value=""
-          /><br /><br />
-          <small
-            id="Confirm-Password-Small"
-            style="position: relative; top: -19px"
-            ;
-          ></small
-          ><br />
-        </div>
-        <div class="Photo">
-          <label for="Photo" style="position: relative; top: -30px" ;
-            >Upload Photo : </label
-          ><br />
-          <input
-            type="file"
-            id="Photo"
-            name="Photo"
-            required="required"
-          /><br /><br />
-          <small
-            id="Photo-Small"
-            style="position: relative; top: -50px"
-            ;
-          ></small
-          ><br />
-        </div>
-        <button class="custom-fields">Add Field...</button>
-        <div class="btns">
-          <input type="submit" id="Submit-Form" />
-          <input type="reset" id="Reset-Form" />
-        </div>
-      </fieldset>
-    </form>
-  </body>
-  <script src="Updated_Form.js"></script>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>Sign up Form</legend>
+
+      <div class="For-Profile display-none">
+        <img src="Boy_Pic.png" alt="" style="height: 100%; width: 100%" class="profile_image" />
+      </div>
+      <div>
+        <label for="First-Name">First Name<sup>*</sup> : </label><br />
+        <input type="text" autofocus="autofocus" placeholder="Enter Your First Name" id="First-Name" name="First-Name"
+          required="required" value="" /><br /><br />
+        <small id="First-Name-Small"></small>
+        <br />
+      </div>
+      <div>
+        <label for="Last-Name">Last Name<sup>*</sup> : </label><br />
+        <input type="text" placeholder="Enter your last name " id="Last-Name" name="Last-Name" required="required"
+          value="" /><br /><br />
+        <small id="Last-Name-Small"></small><br />
+      </div>
+      <div>
+        <label for="Contact-Number">Contact Number<sup>*</sup> : </label><br />
+        <input type="number" placeholder="Enter your 10 digit mobile number" id="Contact-Number" name="Contact-Number"
+          value="" />
+        <small id="Mobile-Number-Small"></small><br />
+      </div>
+      <div>
+        <label for="Email-Id">Email<sup>*</sup> : </label><br />
+        <input type="email" placeholder="Enter your email" id="Email-Id" name="Email-Id" required="required"
+          value="" /><br /><br />
+        <small id="Email-Small"></small><br />
+      </div>
+      <div class="C-P">
+        <label for="Create-Password">Create Password<sup>*</sup> :</label>
+        <img src="Hide_Pass.png" alt="Show Password" class="Hide-Password Password-Visiblity" title="Password Hidden"
+          id="Hide-Password" />
+        <br />
+
+        <input type="password" name="Create-Password" required="required" id="Create-Password" value="" />
+        <br /><br />
+        <small class="small">Password Must Contain at least 8 characters</small><br />
+      </div>
+      <div class="C-F-P">
+        <label style="position: relative; top: -15px" for="Confirm-Password">Confirm Password<sup>*</sup> :
+        </label><br />
+        <input type="Password" name="Confirm-Password" required="required" id="Confirm-Password" value="" /><br /><br />
+        <small id="Confirm-Password-Small" style="position: relative; top: -19px" ;></small><br />
+      </div>
+      <div class="Photo">
+        <label for="Photo" style="position: relative; top: -30px" ;>Upload Photo : </label><br />
+        <input type="file" id="Photo" name="Photo" required="required" /><br /><br />
+        <small id="Photo-Small" style="position: relative; top: -50px" ;></small><br />
+      </div>
+      <button class="custom-fields">Add Field...</button>
+      <div class="btns">
+        <input type="submit" id="Submit-Form" />
+        <input type="reset" id="Reset-Form" />
+      </div>
+    </fieldset>
+  </form>
+</body>
+<script src="Updated_Form.js"></script>
+
 </html>
