@@ -162,23 +162,23 @@ function validatePasswords() {
 
   if (!passwordCriteria.test(createPassword)) {
     createPasswordValid = false;
-    createPasswordError.textContent = 'Password have uppercase,lowercase,numbers and special character';
-    document.getElementById('create-password').classList.add('Error-Input');
+    createPasswordError.innerText = 'Password must have uppercase lowercase numbers and special character';
+    document.getElementById('CP').classList.add('Error-Input');
   } else {
-    createPasswordError.textContent = '';
-    document.getElementById('create-password').classList.remove('Error-Input');
-    document.getElementById('create-password').classList.add('success');
+    createPasswordError.innerText = '';
+    document.getElementById('CP').classList.remove('Error-Input');
+    document.getElementById('CP').classList.add('success');
   }
 
   if (createPassword !== confirmPassword) {
     confirmPasswordValid = false;
-    confirmPasswordError.textContent = 'Passwords do not match.';
-    document.getElementById('confirm-password').classList.add('error');
+    confirmPasswordError.innerText = 'Passwords do not match.';
+    document.getElementById('Confirm-Password').classList.add('Error-Input');
   } else {
-    confirmPasswordError.textContent = '';
-    document.getElementById('confirm-password').classList.remove('error');
+    confirmPasswordError.innerText = '';
+    document.getElementById('Confirm-Password').classList.remove('Error-Input');
     if (createPasswordValid) {
-      document.getElementById('confirm-password').classList.add('success');
+      document.getElementById('Confirm-Password').classList.add('success');
     }
   }
 }
