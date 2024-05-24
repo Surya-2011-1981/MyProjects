@@ -34,119 +34,8 @@ email_Id.oninput = () => {
 }
 
 
+// *******************  Passsword Validation **************
 
-//        ***********  Create-Password Validation ****************
-
-/*
-
-let upper_Characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-let lower_Characters = 'abcdefghijklmnopqrstuvwxyz'.split('');
-let numerical_Characters = '0123456789'.split('');
-let special_Characters = '!@#$%^&*()-_=+[]{}|;:\'",.<>/?'.split('');
-
-// To check UpperCase 
-let check_Uppercase = () => {
-  for (let i = 0; i < create_Password.value.length; i++) {
-    for (let j = 0; j < upper_Characters.length; j++) {
-      if (create_Password.value[i] == upper_Characters[j]);
-      {
-        return true;
-      }
-      // elseif(create_Password.value[create_Password.value.length-1]!=upper_Characters[upper_Characters.length-1])
-      // {
-      //   return false;
-      // }
-    }
-  }
-}
-// To check LowerCase
-let check_Lowercase = () => {
-  for (let i = 0; i < create_Password.value.length; i++) {
-    for (let j = 0; j < lower_Characters.length; j++) {
-      if (create_Password.value[i] == lower_Characters[j]);
-      {
-        return true;
-      }
-      // if(create_Password.value[create_Password.value.length-1]!=lower_Characters[lower_Characters.length-1])
-      // {
-      //   return false;
-      // }
-    }
-  }
-}
-
-// To Check Numerical Value
-let check_Numerical = () => {
-  for (let i = 0; i < create_Password.value.length; i++) {
-    for (let j = 0; j < numerical_Characters.length; j++) {
-      if (create_Password.value[i] == numerical_Characters[j]);
-      {
-        return true;
-      }
-      // if(create_Password.value[create_Password.value.length-1]!=numerical_Characters[numerical__Characters.length-1])
-      // {
-      //   return false;
-      // }
-    }
-  }
-}
-
-// Check Special Symbol 
-
-let check_Special_Symbol = () => {
-  for (let i = 0; i < create_Password.value.length; i++) {
-    for (let j = 0; j < special_Characters.length; j++) {
-      if (create_Password.value[i] == special_Characters[j]);
-      {
-        return true;
-      }
-      // if(create_Password.value[create_Password.value.length-1]!=special_Characters[special_Characters.length-1])
-      // {
-      //   return false;
-      // }
-    }
-  }
-}
-
-let create_Password = document.getElementById("CP");
-console.log(create_Password);
-let small_Tag_Value = document.querySelector(".small");
-create_Password.oninput = () => {
-
-  if (create_Password.value.length >= 8) {
-    small_Tag_Value.innerText = "A password must contain al-least one Uppercase, one Lowercase, one Numrical Value and a Special Symbol";
-    create_Password.classList.remove("Error-Input");
-
-
-    if (check_Uppercase() == true && check_Lowercase() == true && check_Numerical() == true && check_Special_Symbol() == true) {
-      small_Tag_Value.innerText = "";
-      // console.log("Code Reached");
-    }
-    // console.log("Code Reached again");
-  }
-
-}
-  else {
-  create_Password.classList.add("Error-Input");
-}
-}
-
-//            ******* Confirm Password Valiation ************
-let confirm_Password = document.getElementById("Confirm-Password");
-let confirm_Password_Error = document.getElementById("Confirm-Password-Small");
-confirm_Password.oninput = () => {
-  if (confirm_Password.value != create_Password.value) {
-    confirm_Password.classList.add("Error-Input");
-    confirm_Password_Error.innerText = "Password Mis-match";
-  }
-  else {
-    confirm_Password.classList.remove("Error-Input");
-    confirm_Password_Error.innerText = "";
-  }
-}
-
-
-*/
 
 function validatePasswords() {
   const createPassword = document.getElementById('CP').value;
@@ -157,8 +46,8 @@ function validatePasswords() {
 
   const passwordCriteria = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-  let createPasswordValid = true;
-  let confirmPasswordValid = true;
+  // let createPasswordValid = true;
+  // let confirmPasswordValid = true;
 
   if (!passwordCriteria.test(createPassword)) {
     createPasswordValid = false;
@@ -171,15 +60,12 @@ function validatePasswords() {
   }
 
   if (createPassword !== confirmPassword) {
-    confirmPasswordValid = false;
+    // confirmPasswordValid = false;
     confirmPasswordError.innerText = 'Passwords do not match.';
     document.getElementById('Confirm-Password').classList.add('Error-Input');
   } else {
     confirmPasswordError.innerText = '';
     document.getElementById('Confirm-Password').classList.remove('Error-Input');
-    if (createPasswordValid) {
-      document.getElementById('Confirm-Password').classList.add('success');
-    }
   }
 }
 
@@ -196,25 +82,28 @@ confirmPassword.oninput = () => {
 
 // // **************Password Visiblity*********
 
-// let Hide_Password = document.getElementById("Hide-Password");
-// document.addEventListener("DOMContentLoaded", function () {
-//   // var passwordInput = document.getElementById("password");
+let Hide_Password = document.querySelector(".Hide-Password");
+document.addEventListener("DOMContentLoaded", function () {
 
-//   Hide_Password.addEventListener("click", function () {
-//     if (create_Password.type === "password") {
-//       create_Password.type = "text";
-//       confirm_Password.type = "text";
-//       Hide_Password.src = "Pass_Show.jpeg";
-//       Hide_Password.title = "Password Visible";
+  Hide_Password.addEventListener("click", function () {
 
-//     } else {
-//       create_Password.type = "password";
-//       confirm_Password.type = "password";
-//       Hide_Password.src = "Hide_Pass.png";
-//       Hide_Password.title = "Password Hidden";
-//     }
-//   });
-// });
+    const create_Password = document.querySelector("#CP");
+    const confirm_Password = document.querySelector("#Confirm-Password");
+
+    if (create_Password.type === "password") {
+      create_Password.type = "text";
+      confirm_Password.type = "text";
+      Hide_Password.classList.toggle("bxs-show");
+      Hide_Password.classList.toggle("bxs-hide");
+
+    } else {
+      create_Password.type = "password";
+      confirm_Password.type = "password";
+      Hide_Password.classList.toggle("bxs-show");
+      Hide_Password.classList.toggle("bxs-hide");
+    }
+  });
+});
 
 
 
