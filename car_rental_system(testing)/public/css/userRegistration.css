@@ -223,6 +223,7 @@ input::placeholder {
   /* border-radius: 5px; */
 }
 
-.success {
-  border: 2px solid green;
+.Hide-Password {
+  z-index: 999;
+  cursor: pointer;
 }

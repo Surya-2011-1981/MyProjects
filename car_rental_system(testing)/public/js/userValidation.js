@@ -82,6 +82,25 @@ confirmPassword.oninput = () => {
 
 // // **************Password Visiblity*********
 
+// let Hide_Password = document.getElementById("Hide-Password");
+// document.addEventListener("DOMContentLoaded", function () {
+
+//   Hide_Password.addEventListener("click", function () {
+//     if (create_Password.type === "password") {
+//       create_Password.type = "text";
+//       confirm_Password.type = "text";
+//       // Hide_Password.src = "Pass_Show.jpeg";
+//       Hide_Password.title = "Password Visible";
+
+//     } else {
+//       create_Password.type = "password";
+//       confirm_Password.type = "password";
+//       Hide_Password.src = "Hide_Pass.png";
+//       Hide_Password.title = "Password Hidden";
+//     }
+//   });
+// });
+
 let Hide_Password = document.querySelector(".Hide-Password");
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -104,6 +123,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+
+
 
 
 
