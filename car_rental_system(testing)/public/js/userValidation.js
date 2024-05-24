@@ -1,4 +1,27 @@
 
+// ******************** Name Validation ************************
+let first_Name = document.getElementById("First-Name");
+let first_Name_Error = document.getElementById("First-Name-Small")
+first_Name.oninput = () => {
+  let dynamic_Input = first_Name.value;
+  for (i = 0; i < dynamic_Input.length; i++) {
+    if (((dynamic_Input[i].charCodeAt(0) <= 90 && dynamic_Input[i].charCodeAt(0) >= 65) || dynamic_Input[i].charCodeAt(0) == 32) || ((dynamic_Input[i].charCodeAt(0) <= 122 && dynamic_Input[i].charCodeAt(0) >= 97) || dynamic_Input[i].charCodeAt(0) == 32)) {
+      first_Name.classList.remove("Error-Input");
+      first_Name_Error.innerText = "";
+    }
+    else {
+
+      first_Name.classList.add("Error-Input");
+      first_Name_Error.innerText = "Enter a valid Name";
+      break;
+    }
+  }
+
+}
+
+
+
+
 //   *******************  Contact Number Valiation *******************
 
 let contact_Number = document.getElementById("Contact-Number");
@@ -81,26 +104,6 @@ confirmPassword.oninput = () => {
 
 
 // // **************Password Visiblity*********
-
-// let Hide_Password = document.getElementById("Hide-Password");
-// document.addEventListener("DOMContentLoaded", function () {
-
-//   Hide_Password.addEventListener("click", function () {
-//     if (create_Password.type === "password") {
-//       create_Password.type = "text";
-//       confirm_Password.type = "text";
-//       // Hide_Password.src = "Pass_Show.jpeg";
-//       Hide_Password.title = "Password Visible";
-
-//     } else {
-//       create_Password.type = "password";
-//       confirm_Password.type = "password";
-//       Hide_Password.src = "Hide_Pass.png";
-//       Hide_Password.title = "Password Hidden";
-//     }
-//   });
-// });
-
 let Hide_Password = document.querySelector(".Hide-Password");
 document.addEventListener("DOMContentLoaded", function () {
 
