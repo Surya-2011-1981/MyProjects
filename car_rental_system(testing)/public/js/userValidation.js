@@ -1,24 +1,34 @@
 
 // ******************** Name Validation ************************
-let first_Name = document.getElementById("First-Name");
-let first_Name_Error = document.getElementById("First-Name-Small")
-first_Name.oninput = () => {
-  let dynamic_Input = first_Name.value;
-  for (i = 0; i < dynamic_Input.length; i++) {
-    if (((dynamic_Input[i].charCodeAt(0) <= 90 && dynamic_Input[i].charCodeAt(0) >= 65) || dynamic_Input[i].charCodeAt(0) == 32) || ((dynamic_Input[i].charCodeAt(0) <= 122 && dynamic_Input[i].charCodeAt(0) >= 97) || dynamic_Input[i].charCodeAt(0) == 32)) {
-      first_Name.classList.remove("Error-Input");
-      first_Name_Error.innerText = "";
-    }
-    else {
 
-      first_Name.classList.add("Error-Input");
-      first_Name_Error.innerText = "Enter a valid Name";
-      break;
+let full_name = document.getElementById("FullName");
+let full_name_Error = document.querySelector(".name_small");
+
+full_name.oninput = () => {
+  let dynamic_Input = full_name.value;
+  if (dynamic_Input.length == 0) {
+    full_name.classList.add("Error-Input");
+    full_name_Error.innerText = "Name can't be empty";
+  } else {
+    let isValid = true;
+    for (let i = 0; i < dynamic_Input.length; i++) {
+      let charCode = dynamic_Input[i].charCodeAt(0);
+      if (!((charCode >= 65 && charCode <= 90) ||  // Uppercase letters A-Z
+        (charCode >= 97 && charCode <= 122) || // Lowercase letters a-z
+        charCode == 32)) {                     // Space
+        isValid = false;
+        break;
+      }
+    }
+    if (isValid) {
+      full_name.classList.remove("Error-Input");
+      full_name_Error.innerText = "";
+    } else {
+      full_name.classList.add("Error-Input");
+      full_name_Error.innerText = "Name will contain only Alphabetic Characters";
     }
   }
-
-}
-
+};
 
 
 
@@ -28,13 +38,21 @@ let contact_Number = document.getElementById("Contact-Number");
 let contact_Number_Error = document.getElementById("Mobile-Number-Small");
 
 contact_Number.oninput = () => {
-  if ((contact_Number.value).length == 10) {
-    contact_Number.classList.remove("Error-Input");
-    contact_Number_Error.innerText = "";
+  if (contact_Number.value.length == 0) {
+    contact_Number.classList.add("Error-Input");
+    contact_Number_Error.innerText = "Phone Number Can't be empty";
   }
   else {
-    contact_Number.classList.add("Error-Input");
-    contact_Number_Error.innerText = "Please Enter 10 digit mobile number";
+
+    if ((contact_Number.value).length == 10) {
+      contact_Number.classList.remove("Error-Input");
+      contact_Number_Error.innerText = "";
+    }
+    else {
+      contact_Number.classList.add("Error-Input");
+      contact_Number_Error.innerText = "Please Enter 10 digit mobile number";
+    }
+
   }
 }
 //    *******************  Email-Validation   ***********************
@@ -43,16 +61,20 @@ contact_Number.oninput = () => {
 let email_Id = document.getElementById("Email-Id");
 let email_Error = document.getElementById("Email-Small")
 email_Id.oninput = () => {
-  console.log("Email");
-  // let mail_Collection=["@gmail.com","@yahoo.com","@outlook.com","@gmx.com","@iCloud.com"];
   let dynamic_Input = email_Id.value;
-  if (dynamic_Input.endsWith("@gmail.com") || dynamic_Input.endsWith("@yahoo.com") || dynamic_Input.endsWith("@outlook.com") || dynamic_Input.endsWith("@gmx.com") || dynamic_Input.endsWith("@iCloud.com")) {
-    email_Id.classList.remove("Error-Input");
-    email_Error.innerText = "";
+  if (dynamic_Input.length == 0) {
+    email_Id.classList.add("Error-Input");
+    email_Error.innerText = "Email can't be empty";
   }
   else {
-    email_Id.classList.add("Error-Input");
-    email_Error.innerText = "Enter valid Email";
+    if (dynamic_Input.endsWith("@gmail.com") || dynamic_Input.endsWith("@yahoo.com") || dynamic_Input.endsWith("@outlook.com") || dynamic_Input.endsWith("@gmx.com") || dynamic_Input.endsWith("@iCloud.com")) {
+      email_Id.classList.remove("Error-Input");
+      email_Error.innerText = "";
+    }
+    else {
+      email_Id.classList.add("Error-Input");
+      email_Error.innerText = "Enter valid Email";
+    }
   }
 }
 
@@ -68,9 +90,6 @@ function validatePasswords() {
   const confirmPasswordError = document.getElementById('confirm-Password-Small');
 
   const passwordCriteria = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
-  // let createPasswordValid = true;
-  // let confirmPasswordValid = true;
 
   if (!passwordCriteria.test(createPassword)) {
     createPasswordValid = false;
@@ -128,29 +147,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-
-
-
-
 // *********************Submit Button Validation *********************
+
 let submit_btn = document.querySelector(".btn");
-var form = document.querySelector("form");
+let form = document.querySelector("form");
+
 submit_btn.onclick = (e) => {
   e.preventDefault();
-  for (let i = 0; i < form.length; i++) {
-    if (form[i].classList.contains("Error-Input") || form[i].value == undefined) {
-      form[i].focus();
-      alert("Please fill the all neccessary field correctly");
+  let isValid = true;
+
+  for (let i = 0; i < form.elements.length; i++) {
+    let element = form.elements[i];
+
+    if (element.type !== "submit" && element.classList.contains("Error-Input")) {
+      element.focus();
+      alert("Please fill all necessary fields correctly");
+      isValid = false;
       break;
     }
-    else {
-      if (i == (form.length - 1)) {
-        form.submit();
-        alert("Your form has been succesfully submitted...!")
-      }
-    }
+  }
+
+  if (isValid) {
+    form.submit();
+    alert("Your form has been successfully submitted...!");
   }
 }
 
