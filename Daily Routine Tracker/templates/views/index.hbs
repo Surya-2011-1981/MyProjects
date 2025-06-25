@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Daily Tasks Schedule</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>Daily Tasks Schedule</h1>
+            <form id="dailyTasksForm" action="/daily-schedule" method="post">
+                <div class="schedule-header">
+                    <div class="header-item">Title</div>
+                    <div class="header-item">Time</div>
+                    <div class="header-item">Status</div>
+                </div>
+                <div class="task-row">
+                    <div class="task-title">DSA</div>
+                    <div class="task-time">8:00-9:30</div>
+                    <div class="task-status">
+                        <input type="checkbox" id="dsa1" name="dsa1" required>
+                        <label for="dsa1" class="checkbox-label"></label>
+                    </div>
+                </div>
+                <div class="task-row">
+                    <div class="task-title">Project</div>
+                    <div class="task-time">10:00-12:00</div>
+                    <div class="task-status">
+                        <input type="checkbox" id="project1" name="project1" required>
+                        <label for="project1" class="checkbox-label"></label>
+                    </div>
+                </div>
+                <div class="task-row">
+                    <div class="task-title">Aptitude</div>
+                    <div class="task-time">12:00-1:00</div>
+                    <div class="task-status">
+                        <input type="checkbox" id="aptitude1" name="aptitude1" required>
+                        <label for="aptitude1" class="checkbox-label"></label>
+                    </div>
+                </div>
+                <div class="task-row">
+                    <div class="task-title">DSA</div>
+                    <div class="task-time">2:30-4:00</div>
+                    <div class="task-status">
+                        <input type="checkbox" id="dsa2" name="dsa2" required>
+                        <label for="dsa2" class="checkbox-label"></label>
+                    </div>
+                </div>
+                <div class="task-row">
+                    <div class="task-title">Project</div>
+                    <div class="task-time">5:00-6:30</div>
+                    <div class="task-status">
+                        <input type="checkbox" id="project2" name="project2" required>
+                        <label for="project2" class="checkbox-label"></label>
+                    </div>
+                </div>
+                <div class="task-row">
+                    <div class="task-title">Aptitude</div>
+                    <div class="task-time">8:00-9:00</div>
+                    <div class="task-status">
+                        <input type="checkbox" id="aptitude2" name="aptitude2" required>
+                        <label for="aptitude2" class="checkbox-label"></label>
+                    </div>
+                </div>
+
+                <div class="submit-record d-flex justify-content-between align-items-center">
+                    <button type="submit" class="submit-button" style="margin-right: 30px;">Submit</button>
+                    <button class="submit-button" style="margin-left: 30px;">Refresh Your Current Record</button>
+                </div>
+            </form>
+        </div>
+        <div class="record text-white p-4">
+            <h2 class="text-center" style="color:#d1eb98;">Your Consistency</h2>
+        </div>
+    </div>
+    <div class="confirmation z-3 d-flex flex-column text-center align-items-center justify-content-evenly">
+        <h3 class="text-white">Are you sure, You Want to submit the form ? </h3>
+        <div class="btnns d-flex align-items-center justify-content-between gap-5">
+            <input type="button" class="btn btn-success confrm-true" value="yes">
+            <input type="button" class="btn btn-danger cnfrm-false" value="No">
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blur Everything Inside Div</title>
+    <style>
+        .blur-all {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            border: 2px solid #333;
+            filter: blur(8px);
+            /* Blurs all content inside */
+            pointer-events: none;
+            /* Optional: prevents interaction */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blur-all">
+        <h2>Confidential Information</h2>
+        <p>This entire content is blurred and unreadable.</p>
+        <img src="https://via.placeholder.com/100" alt="Sample Image">
+    </div>
+
+</body>
+
+</html>

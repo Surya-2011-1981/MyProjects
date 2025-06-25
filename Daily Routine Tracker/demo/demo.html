@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Single Checkbox Validation</title>
+    <script>
+        function validateCheckbox() {
+            var checkbox = document.getElementById("terms");
+
+            if (!checkbox.checked) {
+                alert("You must agree to the terms and conditions.");
+                // return false; // Prevent form submission
+            }
+
+            // return true; // Allow form submission
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Agreement Form</h2>
+    <form onsubmit=validateCheckbox()>
+        <label>
+            <input type="checkbox" id="terms"> I agree to the terms and conditions
+        </label>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
