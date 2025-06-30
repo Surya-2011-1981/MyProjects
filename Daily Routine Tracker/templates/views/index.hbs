@@ -12,7 +12,7 @@
 
 <body>
     <div class="main">
-        <div class="container">
+        <div class="mainContainer">
             <h1>Daily Tasks Schedule</h1>
             <form id="dailyTasksForm" action="/daily-schedule" method="post">
                 <div class="schedule-header">
@@ -71,12 +71,39 @@
 
                 <div class="submit-record d-flex justify-content-between align-items-center">
                     <button type="submit" class="submit-button" style="margin-right: 30px;">Submit</button>
-                    <button class="submit-button" style="margin-left: 30px;">Refresh Your Current Record</button>
+                    <button class="submit-button" style="margin-left: 30px;">
+                        <a href="/daily-schedule" class="d-flex text-decoration-none text-white">Refresh Your Current
+                            Record</a>
+                    </button>
                 </div>
             </form>
         </div>
         <div class="record text-white p-4">
             <h2 class="text-center" style="color:#d1eb98;">Your Consistency</h2>
+
+            <table border="3px" style="border-collapse: separate; border-spacing: 15px; border: 1px solid black;">
+                <tr>
+                    <th>Date</th>
+                    <th>DSA-1</th>
+                    <th>Project-1</th>
+                    <th>Aptitude-1</th>
+                    <th>DSA-2</th>
+                    <th>Project-2</th>
+                    <th>Aptitude-2</th>
+                </tr>
+            </table>
+
+            {{#each data}}
+            <div class="boxContainer">
+                <div class="date">{{date}}</div>
+                <div class="dsa1  {{#if DSA_1}}bgSky{{else}}bgRed{{/if}}"></div>
+                <div class="project1  {{#if Project_1}}bgSky{{else}}bgRed{{/if}}"></div>
+                <div class="aptitude1  {{#if Aptitude_1}}bgSky{{else}}bgRed{{/if}}"></div>
+                <div class="dsa2  {{#if DSA_2}}bgSky{{else}}bgRed{{/if}}"></div>
+                <div class="project2  {{#if Project_2}}bgSky{{else}}bgRed{{/if}}"></div>
+                <div class="aptitude2  {{#if Aptitude_2}}bgSky{{else}}bgRed{{/if}}"></div>
+            </div>
+            {{/each}}
         </div>
     </div>
     <div class="confirmation z-3 d-flex flex-column text-center align-items-center justify-content-evenly">

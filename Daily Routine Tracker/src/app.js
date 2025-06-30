@@ -17,13 +17,26 @@ try {
     app.set("views", viewPath);
     app.set("view engine", "hbs");
 
-    app.get("/daily-schedule", (req, res) => {
+    app.get("/", (req, res) => {
         res.render("index");
     })
 
+    app.get("/daily-schedule", async (req, res) => {
+        try {
+
+            const data = await ScheduleModel.find();
+            console.log(data);
+            res.render("index", { data });
+        } catch (e) {
+            console.log(e);
+        }
+    })
+
+    app.get("/alreadyFilled", (req, res) => {
+        res.render("alreadyFilled");
+    })
 
     app.post("/daily-schedule", async (req, res) => {
-
         const now = new Date();
         const ist = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
         const dd = String(ist.getDate()).padStart(2, '0');
@@ -51,17 +64,16 @@ try {
             if (error.code === 11000) {
                 res.render("alreadyFilled", { date: today });
             } else {
-
                 res.render("alreadyFilled", { date: today });
             }
         }
-
-
-
     })
-
-
-
+    app.get("/notSubmitted", (req, res) => {
+        res.render("failedToSubmit");
+    })
+    app.get("*", (req, res) => {
+        res.render("404PageNotFound");
+    })
 
     app.listen(port, () => {
         console.log("Listening at port ", port);

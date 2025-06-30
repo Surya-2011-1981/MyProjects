@@ -11,7 +11,8 @@ try {
                 const mm = String(ist.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
                 const yyyy = ist.getFullYear();
                 return `${dd}/${mm}/${yyyy}`;
-            }
+            },
+            // unique: true
         },
         DSA_1: {
             time: "8:00 - 9:30",
